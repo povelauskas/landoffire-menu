@@ -125,7 +125,8 @@ setLang(pick());
 d.querySelector(".langs").addEventListener("click",e=>{const b=e.target.closest("button");if(b)setLang(b.dataset.l)});
 /* search */
 const q=d.getElementById("q"),items=[...d.querySelectorAll("[data-s]")],secs=[...d.querySelectorAll(".sec")],empty=d.querySelector(".empty");
-q.addEventListener("input",()=>{const v=q.value.trim().toLowerCase();let any=0;
+const fold=s=>s.toLowerCase().replace(/ə/g,"e").replace(/ı/g,"i").normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+q.addEventListener("input",()=>{const v=fold(q.value.trim());let any=0;
  items.forEach(it=>{const ok=!v||it.dataset.s.includes(v);it.hidden=!ok;any+=ok});
  secs.forEach(s=>s.hidden=!s.querySelector("[data-s]:not([hidden])"));empty.style.display=any?"none":"block"});
 /* active section chip */

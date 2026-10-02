@@ -26,6 +26,12 @@ UI = {
 e = lambda s: html.escape(s or "", quote=True)
 
 
+def fold(s):
+    """Lowercase, accent-free text for search: 'Şah Plov' matches 'sah plov'. Must match fold() in template.html."""
+    s = s.lower().replace("ə", "e").replace("ı", "i")
+    return "".join(c for c in unicodedata.normalize("NFD", s) if not unicodedata.combining(c))
+
+
 def slug(s):
     s = unicodedata.normalize("NFKD", s.replace("ə", "e").replace("ı", "i"))
     s = re.sub(r"[^a-zA-Z0-9]+", "-", s.encode("ascii", "ignore").decode()).strip("-").lower()
@@ -112,7 +118,7 @@ def build():
             iid = f"{sid}-{slug(it['name'])}"
             iid += f"-{i}" if iid in seen else ""
             seen.add(iid)
-            search = " ".join([it["name"]] + [it.get(l, "") for l in LANGS]).lower()
+            search = fold(" ".join([it["name"]] + [it.get(l, "") for l in LANGS]))
             desc = {l: it.get(l, "") for l in LANGS}
             img = ""
             if it.get("photo"):
