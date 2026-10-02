@@ -260,14 +260,19 @@ def legend_html(g, cls):
             f'<p class="more"><a href="apie">{t(ABOUT_LINK, "lt")}</a></p></article>')
 
 
+def alt_langs(title):
+    """The title in the other languages; CSS hides the one the guest is reading."""
+    return "".join(f'<span class="a-{l}">{e(title[l])}</span>' for l in LANGS if title.get(l))
+
+
 def render_mag(data, dims, place, legend):
     """Magazine edition: same data and pick controls, editorial layout. Section 00 is the legend."""
-    alt0 = " · ".join(LEGEND_TITLE[l] for l in LANGS)
+    alt0 = alt_langs(LEGEND_TITLE)
     nav = [f'<a href="#legenda" data-sec="legenda"><i>00</i>{t(LEGEND_TITLE, "lt")}</a>']
     toc = [f'<li><a href="#legenda"><span class="n">00</span><span class="t">{t(LEGEND_TITLE, "lt")}</span>'
            f'<span class="c caps">{t(legend["title"], "lt")}</span></a></li>']
     body = [f'<section id="legenda" class="sec" aria-labelledby="mh-legenda"><div class="opener"><span class="num">00</span>'
-            f'<h2 id="mh-legenda">{t(LEGEND_TITLE, "lt")}</h2><span class="alt caps">{e(alt0)}</span></div>'
+            f'<h2 id="mh-legenda">{t(LEGEND_TITLE, "lt")}</h2><span class="alt caps">{alt0}</span></div>'
             f'{legend_html(legend, "legend")}</section>']
     for n, sec in enumerate(data["sections"], 1):
         sid, num = sec["id"], f"{n:02d}"
@@ -275,7 +280,7 @@ def render_mag(data, dims, place, legend):
         nav.append(f'<a href="#{sid}" data-sec="{sid}"><i>{num}</i>{t(title, "lt")}</a>')
         toc.append(f'<li><a href="#{sid}"><span class="n">{num}</span><span class="t">{t(sec["title"], "lt")}</span>'
                    f'<span class="c caps">{len(sec["items"])}</span></a></li>')
-        alt = " · ".join(sec["title"][l] for l in LANGS if sec["title"].get(l))
+        alt = alt_langs(sec["title"])
         feats, rows, group = [], [], None
         for i, it in enumerate(sec["items"]):
             iid = it["_iid"]  # same keys as the classic page, so a selection carries over
@@ -301,7 +306,7 @@ def render_mag(data, dims, place, legend):
                     f'<span class="dots"></span><span class="pr">{price_html(it)}</span></div>{extra}{p}{picks_html(it, iid)}</article>')
         inner = (f'<div class="feats">{"".join(feats)}</div>' if feats else "") + (f'<div class="list">{"".join(rows)}</div>' if rows else "")
         body.append(f'<section id="{sid}" class="sec" aria-labelledby="mh-{sid}"><div class="opener"><span class="num">{num}</span>'
-                    f'<h2 id="mh-{sid}">{t(sec["title"], "lt")}</h2><span class="alt caps">{e(alt)}</span></div>{inner}'
+                    f'<h2 id="mh-{sid}">{t(sec["title"], "lt")}</h2><span class="alt caps">{alt}</span></div>{inner}'
                     f'{"<p class=sec-note>" + t(sec["note"], "lt") + "</p>" if sec.get("note") else ""}</section>')
         if n in QUOTES:
             body.append(f'<blockquote class="quote"><q>{t(QUOTES[n], "lt")}</q></blockquote>')
