@@ -240,8 +240,23 @@ QUOTES = {1: {"lt": "Ugnis – pirmasis prieskonis.", "en": "Fire is the first s
 LEGEND_TITLE = {"lt": "Legenda", "en": "The legend", "ru": "Легенда"}
 
 
+def legend_image(g):
+    """Storybook watercolour for the legend: converted once to two WebP widths."""
+    im = g.get("image")
+    if not im:
+        return ""
+    src = Image.open(ROOT / im["src"]).convert("RGB")
+    for w in (800, 1536):
+        out = DIST / "img" / f"legend-{w}.webp"
+        if not out.exists():
+            src.resize((w, round(src.height * w / src.width)), Image.LANCZOS).save(out, "WEBP", quality=80, method=6)
+    alt = e(im["alt"]["en"])
+    return (f'<figure class="legend-art"><img src="img/legend-1536.webp" srcset="img/legend-800.webp 800w, img/legend-1536.webp 1536w" '
+            f'sizes="(min-width: 900px) 860px, 100vw" width="{src.width}" height="{src.height}" alt="{alt}" loading="lazy" decoding="async"></figure>')
+
+
 def legend_html(g, cls):
-    return (f'<article class="{cls}"><h3>{t(g["title"], "lt")}</h3><p>{t(g["body"], "lt")}</p>'
+    return (f'<article class="{cls}">{legend_image(g)}<h3>{t(g["title"], "lt")}</h3><p>{t(g["body"], "lt")}</p>'
             f'<p class="more"><a href="apie">{t(ABOUT_LINK, "lt")}</a></p></article>')
 
 
@@ -303,7 +318,7 @@ def render_about(about):
     pl = about["place"]
     tel = re.sub(r"[^+0-9]", "", pl["phone"])
     it = about["intro"]
-    legends = "".join(f'<article class="legend" data-lg="{g["key"]}"{"" if i == 0 else " hidden"}>'
+    legends = "".join(f'<article class="legend" data-lg="{g["key"]}"{"" if i == 0 else " hidden"}>{legend_image(g)}'
                       f'<h3>{t(g["title"], "lt")}</h3><p>{t(g["body"], "lt")}</p></article>'
                       for i, g in enumerate(about["legends"]))
     return {"{{KICKER}}": t(it["kicker"], "lt"), "{{TITLE}}": t(it["title"], "lt"), "{{LEAD}}": t(it["lead"], "lt"),
