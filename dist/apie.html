@@ -38,12 +38,13 @@ header.top{position:sticky;top:0;z-index:20;background:var(--paper);border-botto
 .hero .lead{font:400 var(--fs-lead)/1.45 var(--disp);max-width:36ch;margin:0}
 .hero figure{margin:2rem calc(-1 * var(--pad)) 0}
 .hero figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.points{list-style:none;margin:2.5rem 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--ink)}
+.points{list-style:none;margin:var(--sp-6) 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--ink)}
 @media (min-width:800px){.points{grid-template-columns:repeat(3,1fr);column-gap:2rem}}
 .points li{padding:1.1rem 0 1.1rem 1.6rem;text-indent:-1.6rem;border-bottom:1px solid rgba(22,18,15,.18);font-size:var(--fs-body);line-height:var(--lh-body)}
 .points li::before{content:"✦";color:var(--red);display:inline-block;width:1.6rem;text-indent:0}
-.lg{margin-top:4.5rem;border-top:3px double var(--ink);padding-top:1rem}
+.lg{margin-top:var(--sp-7);border-top:3px double var(--ink);padding-top:1rem}
 .lg .head{display:flex;justify-content:space-between;align-items:baseline}
+.lg h2 .n{color:var(--red);margin-right:.35rem}
 .lg h2{font:italic 400 var(--fs-h2)/var(--lh-tight) var(--disp);margin:.4rem 0 1.2rem}
 
 .legend-art{margin:0 0 1.4rem}.legend-art img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
@@ -51,7 +52,7 @@ header.top{position:sticky;top:0;z-index:20;background:var(--paper);border-botto
 .legend p{font:400 var(--fs-lead)/1.6 var(--disp);max-width:34em;margin:0}
 .legend p::first-letter{float:left;font:400 calc(var(--fs-lead) * 1.6 * 3 - .2rem)/.8 var(--disp);color:var(--red);padding:.35rem .5rem 0 0}
 @supports (initial-letter:3){.legend p::first-letter{float:none;initial-letter:3;font-size:inherit;line-height:inherit;padding:0 .5rem 0 0}}
-.visit{margin-top:4.5rem;border-top:3px double var(--ink);padding-top:1rem;display:grid;gap:1.5rem}
+.visit{margin-top:var(--sp-7);border-top:3px double var(--ink);padding-top:1rem;display:grid;gap:1.5rem}
 @media (min-width:800px){.visit{grid-template-columns:1fr 1fr}}
 .visit h2{font:italic 400 var(--fs-h2)/var(--lh-tight) var(--disp);margin:.4rem 0 0;grid-column:1/-1}
 .visit dl{margin:0;display:grid;gap:1.1rem}
@@ -62,7 +63,8 @@ header.top{position:sticky;top:0;z-index:20;background:var(--paper);border-botto
 .btns a{display:flex;justify-content:space-between;align-items:center;min-height:56px;padding:0 1.1rem;text-decoration:none;font:600 var(--fs-label)/var(--lh-label) var(--text);letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--ink)}
 .btns a.pri{background:var(--red);border-color:var(--red);color:#fff}
 .stars{color:var(--red);letter-spacing:.1em}
-footer{border-top:3px double var(--ink);max-width:1100px;margin:4.5rem auto 0;padding:2rem var(--pad) calc(3rem + env(safe-area-inset-bottom));display:grid;gap:1rem;color:var(--soft)}
+footer{border-top:3px double var(--ink);max-width:1100px;margin:var(--sp-7) auto 0;padding:var(--sp-6) var(--pad) calc(var(--sp-7) + env(safe-area-inset-bottom));display:grid;gap:var(--sp-4);color:var(--soft);line-height:1.6}
+footer p{margin:0}
 footer .word{color:var(--ink);font-size:var(--fs-dish)}
 footer a{color:var(--ink)}
 </style>
@@ -82,8 +84,7 @@ footer a{color:var(--ink)}
   <ul class="points"><li><span lang="lt" class="l-lt">Šašlykai ant tikrų žarijų – nuo avienos šonkaulių iki lülə kebabo.</span><span lang="en" class="l-en">Kebabs over real charcoal – from lamb ribs to lülə kebab.</span><span lang="ru" class="l-ru">Шашлыки на настоящих углях – от бараньих рёбрышек до люля-кебаба.</span></li><li><span lang="lt" class="l-lt">Šacho plovas lavašo kupole – užsakykite prieš 2 valandas, jis atidaromas prie stalo.</span><span lang="en" class="l-en">Şah Plov under a lavash dome – order 2 hours ahead; it is opened at your table.</span><span lang="ru" class="l-ru">Шах-плов под куполом из лаваша – закажите за 2 часа, его открывают у стола.</span></li><li><span lang="lt" class="l-lt">Gimtadieniai ir banketai: rinkiniai 6–10 žmonių ir gyva muzika keturiomis kalbomis.</span><span lang="en" class="l-en">Birthdays and banquets: sets for 6–10 people and live music in four languages.</span><span lang="ru" class="l-ru">Дни рождения и банкеты: сеты на 6–10 человек и живая музыка на четырёх языках.</span></li></ul>
  </section>
  <section class="lg" aria-labelledby="lgh">
-  <div class="head"><p class="caps">00</p></div>
-  <h2 id="lgh" data-ui="legend">Legenda</h2>
+  <h2 id="lgh"><span class="n">00</span> <span data-ui="legend">Legenda</span></h2>
   <article class="legend" data-lg="C"><figure class="legend-art"><img src="img/legend-1536.webp" srcset="img/legend-800.webp 800w, img/legend-1536.webp 1536w" sizes="(min-width: 900px) 860px, 100vw" width="1536" height="1024" alt="Watercolour: a cook by the campfire cuts open the golden lavash dome, the steam rises like a crown, the young Shah watches." loading="lazy" decoding="async"></figure><h3><span lang="lt" class="l-lt">Šacho karūna</span><span lang="en" class="l-en">The Shah&#x27;s crown</span><span lang="ru" class="l-ru">Корона шаха</span></h3><p><span lang="lt" class="l-lt">Širvano virėjui buvo įsakyta paruošti patiekalą, vertą šacho. Tačiau dvaras keliavo, o virtuvė buvo tik laužas. Virėjas suvyniojo šafraninius ryžius, avieną, kaštonus ir abrikosus į ploną lavašą ir užkasė puodą žarijose. Kai prie stalo jis perpjovė auksinį kupolą, garai pakilo lyg nuo nuimamos karūnos. Šachas paskelbė, kad nuo šiol patiekalas neš jo vardą. Kiekvieną mūsų Şah Plov vis dar atidarome prie stalo – svečiams, kurie vienam vakarui tampa šachais.</span><span lang="en" class="l-en">A cook from Shirvan was ordered to make a dish worthy of the Shah – but the court was on the road and the kitchen was a campfire. He wrapped saffron rice, lamb, chestnuts and apricots in thin lavash and buried the pot in the coals. When he cut the golden dome open at the table, the steam rose like a crown being lifted. The Shah declared that from then on the dish would carry his name. We still open every Şah Plov at the table – for guests who become shahs for an evening.</span><span lang="ru" class="l-ru">Повару из Ширвана приказали приготовить блюдо, достойное шаха, – но двор был в пути, а кухней служил костёр. Он завернул шафрановый рис, баранину, каштаны и абрикосы в тонкий лаваш и закопал котёл в угли. Когда он разрезал золотой купол у стола, пар поднялся, словно с головы сняли корону. Шах объявил, что отныне блюдо будет носить его имя. Каждый наш Шах-плов мы до сих пор открываем у стола – для гостей, которые на один вечер становятся шахами.</span></p></article>
  </section>
  <section class="visit" aria-labelledby="vh">

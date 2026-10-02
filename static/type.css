@@ -3,6 +3,7 @@
    use clamp() between a 360px phone and a 1240px desktop. Values and their
    sources are in docs/typography.md. */
 :root{
+ --sp-1:.25rem; --sp-2:.5rem; --sp-3:.75rem; --sp-4:1rem; --sp-5:1.5rem; --sp-6:2rem; --sp-7:3rem;  /* spacing scale */
  --fs-label:.8125rem;                                   /* 13px  caps labels, chips, meta */
  --fs-small:.9375rem;                                   /* 15px  secondary text, notes */
  --fs-body:1.0625rem;                                   /* 17px  descriptions (iOS body size) */
@@ -22,7 +23,7 @@ html{font-size:100%}
 body{font-size:var(--fs-body);line-height:var(--lh-body);font-kerning:normal;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 h1,h2,h3{text-wrap:balance}
 p,li,dd{text-wrap:pretty}
-p{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+p{hyphens:manual;overflow-wrap:break-word}  /* auto-hyphenation chopped almost every line on phones */
 h1,h2,h3,.name,.nm{overflow-wrap:break-word}
 /* Lithuanian hyphenation is missing in Safari/iOS, so long words may break instead */
 .price,.pr,.pl,.sz,.sum,.lt,.tot,.cnt,output{font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}

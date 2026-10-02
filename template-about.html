@@ -38,12 +38,13 @@ header.top{position:sticky;top:0;z-index:20;background:var(--paper);border-botto
 .hero .lead{font:400 var(--fs-lead)/1.45 var(--disp);max-width:36ch;margin:0}
 .hero figure{margin:2rem calc(-1 * var(--pad)) 0}
 .hero figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.points{list-style:none;margin:2.5rem 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--ink)}
+.points{list-style:none;margin:var(--sp-6) 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--ink)}
 @media (min-width:800px){.points{grid-template-columns:repeat(3,1fr);column-gap:2rem}}
 .points li{padding:1.1rem 0 1.1rem 1.6rem;text-indent:-1.6rem;border-bottom:1px solid rgba(22,18,15,.18);font-size:var(--fs-body);line-height:var(--lh-body)}
 .points li::before{content:"✦";color:var(--red);display:inline-block;width:1.6rem;text-indent:0}
-.lg{margin-top:4.5rem;border-top:3px double var(--ink);padding-top:1rem}
+.lg{margin-top:var(--sp-7);border-top:3px double var(--ink);padding-top:1rem}
 .lg .head{display:flex;justify-content:space-between;align-items:baseline}
+.lg h2 .n{color:var(--red);margin-right:.35rem}
 .lg h2{font:italic 400 var(--fs-h2)/var(--lh-tight) var(--disp);margin:.4rem 0 1.2rem}
 
 .legend-art{margin:0 0 1.4rem}.legend-art img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
@@ -51,7 +52,7 @@ header.top{position:sticky;top:0;z-index:20;background:var(--paper);border-botto
 .legend p{font:400 var(--fs-lead)/1.6 var(--disp);max-width:34em;margin:0}
 .legend p::first-letter{float:left;font:400 calc(var(--fs-lead) * 1.6 * 3 - .2rem)/.8 var(--disp);color:var(--red);padding:.35rem .5rem 0 0}
 @supports (initial-letter:3){.legend p::first-letter{float:none;initial-letter:3;font-size:inherit;line-height:inherit;padding:0 .5rem 0 0}}
-.visit{margin-top:4.5rem;border-top:3px double var(--ink);padding-top:1rem;display:grid;gap:1.5rem}
+.visit{margin-top:var(--sp-7);border-top:3px double var(--ink);padding-top:1rem;display:grid;gap:1.5rem}
 @media (min-width:800px){.visit{grid-template-columns:1fr 1fr}}
 .visit h2{font:italic 400 var(--fs-h2)/var(--lh-tight) var(--disp);margin:.4rem 0 0;grid-column:1/-1}
 .visit dl{margin:0;display:grid;gap:1.1rem}
@@ -62,7 +63,8 @@ header.top{position:sticky;top:0;z-index:20;background:var(--paper);border-botto
 .btns a{display:flex;justify-content:space-between;align-items:center;min-height:56px;padding:0 1.1rem;text-decoration:none;font:600 var(--fs-label)/var(--lh-label) var(--text);letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--ink)}
 .btns a.pri{background:var(--red);border-color:var(--red);color:#fff}
 .stars{color:var(--red);letter-spacing:.1em}
-footer{border-top:3px double var(--ink);max-width:1100px;margin:4.5rem auto 0;padding:2rem var(--pad) calc(3rem + env(safe-area-inset-bottom));display:grid;gap:1rem;color:var(--soft)}
+footer{border-top:3px double var(--ink);max-width:1100px;margin:var(--sp-7) auto 0;padding:var(--sp-6) var(--pad) calc(var(--sp-7) + env(safe-area-inset-bottom));display:grid;gap:var(--sp-4);color:var(--soft);line-height:1.6}
+footer p{margin:0}
 footer .word{color:var(--ink);font-size:var(--fs-dish)}
 footer a{color:var(--ink)}
 </style>
@@ -82,8 +84,7 @@ footer a{color:var(--ink)}
   <ul class="points">{{POINTS}}</ul>
  </section>
  <section class="lg" aria-labelledby="lgh">
-  <div class="head"><p class="caps">00</p></div>
-  <h2 id="lgh" data-ui="legend">Legenda</h2>
+  <h2 id="lgh"><span class="n">00</span> <span data-ui="legend">Legenda</span></h2>
   {{LEGENDS}}
  </section>
  <section class="visit" aria-labelledby="vh">
