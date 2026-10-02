@@ -16,11 +16,26 @@ SITE_URL = "https://landoffire-menu.vercel.app"
 LANGS = ("lt", "en", "ru")
 UI = {
     "lt": {"menu": "Meniu", "search": "Ieškoti patiekalo", "none": "Nieko nerasta",
-           "top": "Į viršų", "lang": "Kalba", "prices": "Kainos nurodytos eurais su PVM."},
+           "top": "Į viršų", "lang": "Kalba", "prices": "Kainos nurodytos eurais su PVM.",
+           "add": "Pridėti", "mine": "Mano pasirinkimas", "total": "Iš viso", "show": "Rodyti padavėjui",
+           "back": "Atgal", "clear": "Išvalyti", "clearq": "Išvalyti visą pasirinkimą?", "close": "Uždaryti",
+           "note": "Tai ne užsakymas – parodykite šį sąrašą padavėjui.",
+           "nosel": "Dar nieko nepasirinkote. Spauskite „Pridėti“ prie patiekalo.",
+           "more": "Vienu daugiau", "less": "Vienu mažiau"},
     "en": {"menu": "Menu", "search": "Search the menu", "none": "Nothing found",
-           "top": "Back to top", "lang": "Language", "prices": "Prices in euros, VAT included."},
+           "top": "Back to top", "lang": "Language", "prices": "Prices in euros, VAT included.",
+           "add": "Add", "mine": "My selection", "total": "Total", "show": "Show to waiter",
+           "back": "Back", "clear": "Clear", "clearq": "Clear the whole selection?", "close": "Close",
+           "note": "This is not an order – show this list to your waiter.",
+           "nosel": "Nothing selected yet. Tap “Add” on a dish.",
+           "more": "One more", "less": "One less"},
     "ru": {"menu": "Меню", "search": "Поиск блюда", "none": "Ничего не найдено",
-           "top": "Наверх", "lang": "Язык", "prices": "Цены указаны в евро с НДС."},
+           "top": "Наверх", "lang": "Язык", "prices": "Цены указаны в евро с НДС.",
+           "add": "Добавить", "mine": "Мой выбор", "total": "Итого", "show": "Показать официанту",
+           "back": "Назад", "clear": "Очистить", "clearq": "Очистить весь выбор?", "close": "Закрыть",
+           "note": "Это не заказ – покажите этот список официанту.",
+           "nosel": "Вы ещё ничего не выбрали. Нажмите «Добавить» у блюда.",
+           "more": "Ещё один", "less": "На один меньше"},
 }
 
 e = lambda s: html.escape(s or "", quote=True)
@@ -92,14 +107,28 @@ def lbl(x):
 
 
 def price_html(it):
-    if it.get("sizes"):
-        return '<span class="sizes">' + "".join(
-            f'<span class="sz"><small>{lbl(s["label"])}</small> {money(s["price"])}</span>' for s in it["sizes"]) + "</span>"
+    if it.get("sizes"):  # sizes are listed with their own add buttons in picks_html
+        return ""
     if not it.get("price"):
         return ""
     unit = f' / {lbl(it["unit"])}' if it.get("unit") else ""
     vol = f'<small>{e(it["volume"])}</small> ' if it.get("volume") else ""
     return f'<span class="price">{vol}{money(it["price"])}{unit}</span>'
+
+
+def picks_html(it, iid):
+    """One pick control per orderable offer (each size is its own offer).
+    data-k = stable key in the guest's saved selection, data-p = price in cents,
+    data-z = size label (per-language dict or plain text) shown in the selection list."""
+    offers = it.get("sizes") or ([{"price": it["price"]}] if it.get("price") else [])
+    rows = []
+    for k, o in enumerate(offers):
+        key = iid if len(offers) == 1 else f"{iid}~{k}"
+        z = o.get("label") or it.get("volume") or ""
+        label = f'<span class="pl"><small>{lbl(z)}</small> {money(o["price"])}</span>' if it.get("sizes") else ""
+        rows.append(f'<div class="pk">{label}<span class="ctl" data-k="{e(key)}" data-n="{e(it["name"])}" '
+                    f'data-p="{round(float(o["price"]) * 100)}" data-z="{e(json.dumps(z, ensure_ascii=False))}"></span></div>')
+    return f'<div class="picks">{"".join(rows)}</div>' if rows else ""
 
 
 def build():
@@ -135,7 +164,7 @@ def build():
             cards.append(
                 f'<article class="{cls}" id="{iid}" data-s="{e(search)}">{img}'
                 f'<div class="txt"><h3 class="it"><span class="name">{e(it["name"])}</span>{price_html(it)}</h3>'
-                f'{extra}{"<p>" + t(desc, "lt") + "</p>" if any(desc.values()) else ""}</div></article>')
+                f'{extra}{"<p>" + t(desc, "lt") + "</p>" if any(desc.values()) else ""}{picks_html(it, iid)}</div></article>')
             ld = {"@type": "MenuItem", "name": it["name"], "description": it.get("en") or it.get("lt", "")}
             if it.get("sizes"):
                 ld["offers"] = [{"@type": "Offer", "price": z["price"], "priceCurrency": "EUR"} for z in it["sizes"]]

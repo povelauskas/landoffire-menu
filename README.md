@@ -7,6 +7,9 @@ Live: https://landoffire-menu.vercel.app
 
 - Static HTML, no framework, no trackers, no external fonts — one ~100 KB page plus lazy WebP photos.
 - Lithuanian / English / Russian switch (remembers the choice, defaults to the phone's language).
+- "My selection": guests tap Add (per size where there are sizes), see count and total in a bottom bar,
+  and open a large-text "show to waiter" view (keeps the screen awake). Not an order; stored only on
+  the guest's phone for 6 hours.
 - Sticky section chips that follow the scroll, instant search, back-to-top button.
 - schema.org `Restaurant` + `Menu` JSON-LD, Open Graph image, web-app manifest and icons.
 

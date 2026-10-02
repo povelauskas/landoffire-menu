@@ -80,6 +80,53 @@ h3.it{display:flex;align-items:baseline;justify-content:space-between;gap:.75rem
 .grp:first-child{margin-top:0}
 .row h3{font-size:1.15rem;margin:0}
 .row p{margin-top:.2rem}
+/* selection */
+.picks{display:flex;flex-direction:column;gap:.5rem;margin-top:.75rem}
+.pk{display:flex;align-items:center;justify-content:flex-end;gap:.75rem;min-height:44px}
+.pl{margin-right:auto;font:600 1rem/1 var(--sans);color:var(--red)}
+.pl small{font-weight:500;color:var(--muted);font-size:.85rem;margin-right:.2rem}
+.add{font:600 .95rem/1 var(--sans);color:#fff;background:var(--red);border:0;border-radius:999px;padding:.75rem 1.1rem;min-height:44px;cursor:pointer}
+.add::before{content:"+ "}
+.step{display:inline-flex;align-items:center;border:2px solid var(--red);border-radius:999px;overflow:hidden}
+.step button{width:44px;height:40px;border:0;background:#fff;color:var(--red);font:600 1.3rem/1 var(--sans);cursor:pointer}
+.step output{min-width:2rem;text-align:center;font:700 1.05rem/1 var(--sans)}
+.card.on,.row.on{outline:2px solid var(--red);outline-offset:-2px}
+.selbar{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom));z-index:30;display:none;
+ align-items:center;gap:.75rem;padding:.9rem 1.1rem;border:0;border-radius:14px;background:var(--ink);color:#fff;
+ font:600 1rem/1.2 var(--sans);box-shadow:0 6px 24px rgba(0,0,0,.3);cursor:pointer;max-width:560px;margin:auto}
+.selbar.show{display:flex}
+.selbar .cnt{background:var(--red);border-radius:999px;min-width:1.8rem;padding:.3rem .5rem;text-align:center}
+.selbar .sum{margin-left:auto}
+body.has-sel main{padding-bottom:6rem}
+body.has-sel .totop{display:none}
+dialog{border:0;padding:0;width:100%;max-width:560px;max-height:92vh;margin:auto auto 0;border-radius:18px 18px 0 0;background:var(--bg);color:var(--ink)}
+@media (min-width:600px){dialog{margin:auto;border-radius:18px}}
+dialog::backdrop{background:rgba(20,10,10,.55)}
+.dh{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.1rem;background:var(--bg);border-bottom:1px solid var(--line)}
+.dh h2{font:400 1.6rem/1 var(--serif);color:var(--red);margin:0}
+.x{width:44px;height:44px;border:0;background:#fff;border-radius:50%;font-size:1.4rem;cursor:pointer}
+.sl{list-style:none;margin:0;padding:.5rem 1.1rem}
+.sl li{display:flex;align-items:center;gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--line)}
+.sl .nm{flex:1;min-width:0}
+.sl .nm b{display:block;font:400 1.2rem/1.2 var(--serif)}
+.sl .nm small{color:var(--muted)}
+.sl .lt{font-weight:600;white-space:nowrap}
+.tot{display:flex;justify-content:space-between;padding:.75rem 1.1rem;font:700 1.2rem var(--sans)}
+.note{margin:0 1.1rem;color:var(--muted);font-size:.9rem}
+.acts{display:flex;gap:.75rem;padding:1rem 1.1rem calc(1rem + env(safe-area-inset-bottom))}
+.acts button{flex:1;min-height:52px;border-radius:12px;font:600 1rem var(--sans);cursor:pointer}
+.pri{background:var(--red);color:#fff;border:0}
+.sec2{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.nosel{padding:2rem 1.1rem;color:var(--muted);text-align:center}
+/* waiter view: big, high contrast, names as printed on the menu */
+.wv{position:fixed;inset:0;z-index:50;background:#fff;color:#000;overflow:auto;padding:calc(1rem + env(safe-area-inset-top)) 1.25rem calc(6rem + env(safe-area-inset-bottom))}
+.wv[hidden]{display:none}
+.wv ul{list-style:none;margin:0;padding:0}
+.wv li{display:flex;gap:.75rem;align-items:baseline;padding:.9rem 0;border-bottom:2px solid #eee;font:600 1.9rem/1.2 var(--sans)}
+.wv li .q{color:var(--red);min-width:3.2rem}
+.wv li small{display:block;font-size:1.1rem;font-weight:500;color:#555}
+.wv .tot{padding:1rem 0;font-size:1.5rem}
+.wv .back{position:fixed;left:1rem;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom));min-height:56px;border:0;border-radius:14px;background:var(--ink);color:#fff;font:600 1.1rem var(--sans)}
 .empty{display:none;text-align:center;color:var(--muted);padding:3rem 1rem}
 footer{background:var(--ink);color:#e9e2da;padding:2rem 1rem calc(2rem + env(safe-area-inset-bottom));text-align:center;font-size:.9rem}
 footer a{color:#fff}
@@ -110,6 +157,17 @@ footer a{color:#fff}
 <main id="menu">{{BODY}}<p class="empty" data-ui="none">Nieko nerasta</p></main>
 <footer>{{FOOTER}}<p data-ui="prices">Kainos nurodytos eurais su PVM.</p></footer>
 <button class="totop" type="button" aria-label="Back to top" data-al="top">↑</button>
+<button class="selbar" type="button" aria-haspopup="dialog"><span class="cnt">0</span><span data-ui="mine">Mano pasirinkimas</span><span class="sum"></span></button>
+<dialog id="sel" aria-labelledby="selh">
+ <div class="dh"><h2 id="selh" data-ui="mine">Mano pasirinkimas</h2><button class="x" type="button" data-al="close" aria-label="Uždaryti">×</button></div>
+ <ul class="sl"></ul>
+ <p class="nosel" data-ui="nosel" hidden></p>
+ <div class="tot"><span data-ui="total">Iš viso</span><span class="sum"></span></div>
+ <p class="note" data-ui="note"></p>
+ <div class="acts"><button class="sec2 clr" type="button" data-ui="clear">Išvalyti</button><button class="pri wvb" type="button" data-ui="show">Rodyti padavėjui</button></div>
+</dialog>
+<div class="wv" hidden><ul></ul><div class="tot"><span data-ui="total">Iš viso</span><span class="sum"></span></div><p data-ui="note"></p><button class="back" type="button" data-ui="back">Atgal</button></div>
+<div class="skip" aria-live="polite" id="live"></div>
 <script>
 (()=>{const UI={{UI}},d=document,root=d.documentElement,KEY="lof-lang";
 const pick=()=>{try{const s=localStorage.getItem(KEY);if(s&&UI[s])return s}catch(e){}
@@ -123,6 +181,43 @@ function setLang(l){root.dataset.lang=l;root.lang=l;
  try{localStorage.setItem(KEY,l)}catch(e){}}
 setLang(pick());
 d.querySelector(".langs").addEventListener("click",e=>{const b=e.target.closest("button");if(b)setLang(b.dataset.l)});
+/* selection: guests mark what they want, then show the list to the waiter (not an order) */
+const SK="lof-pick",TTL=6*3600e3,ctls=[...d.querySelectorAll(".ctl")],cat=new Map();
+ctls.forEach(c=>cat.set(c.dataset.k,{n:c.dataset.n,p:+c.dataset.p,z:JSON.parse(c.dataset.z)}));
+let sel={};try{const s=JSON.parse(localStorage.getItem(SK));if(s&&Date.now()-s.t<TTL)sel=s.q}catch(e){}
+for(const k in sel)if(!cat.has(k)||!(sel[k]>0))delete sel[k];
+const L=()=>UI[root.dataset.lang],eur=c=>(c/100).toFixed(2).replace(".",",")+"\u00a0€",
+ zl=z=>z?(typeof z==="string"?z:z[root.dataset.lang]||z.lt):"",
+ esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[c]),
+ step=(k,q,n)=>`<span class="step"><button type="button" data-d="-1" data-k="${esc(k)}" aria-label="${esc(L().less+": "+n)}">−</button><output>${q}</output><button type="button" data-d="1" data-k="${esc(k)}" aria-label="${esc(L().more+": "+n)}">+</button></span>`;
+const bar=d.querySelector(".selbar"),dlg=d.getElementById("sel"),wv=d.querySelector(".wv"),live=d.getElementById("live");
+function paint(){const keys=Object.keys(sel);let n=0,sum=0;
+ keys.forEach(k=>{n+=sel[k];sum+=sel[k]*cat.get(k).p});
+ ctls.forEach(c=>{const q=sel[c.dataset.k]||0;
+  c.innerHTML=q?step(c.dataset.k,q,c.dataset.n):`<button type="button" class="add" data-d="1" data-k="${esc(c.dataset.k)}" aria-label="${esc(L().add+": "+c.dataset.n)}">${esc(L().add)}</button>`});
+ d.querySelectorAll("article[data-s]").forEach(a=>a.classList.toggle("on",!!a.querySelector(".step")));
+ bar.classList.toggle("show",n>0);d.body.classList.toggle("has-sel",n>0);
+ bar.querySelector(".cnt").textContent=n;d.querySelectorAll(".sum").forEach(s=>s.textContent=eur(sum));
+ const rows=keys.map(k=>{const it=cat.get(k);return{k,it,q:sel[k],z:zl(it.z)}});
+ dlg.querySelector(".sl").innerHTML=rows.map(r=>`<li><span class="nm"><b>${esc(r.it.n)}</b>${r.z?`<small>${esc(r.z)}</small>`:""}</span>${step(r.k,r.q,r.it.n)}<span class="lt">${eur(r.q*r.it.p)}</span></li>`).join("");
+ dlg.querySelector(".nosel").hidden=n>0;dlg.querySelector(".tot").hidden=!n;dlg.querySelector(".wvb").disabled=!n;
+ wv.querySelector("ul").innerHTML=rows.map(r=>{const z=r.it.z&&typeof r.it.z==="object"?r.it.z.lt:r.z; /* staff read Lithuanian */
+  return`<li><span class="q">${r.q}×</span><span>${esc(r.it.n)}${z?`<small>${esc(z)}</small>`:""}</span></li>`}).join("");
+ try{localStorage.setItem(SK,JSON.stringify({t:Date.now(),q:sel}))}catch(e){}
+ return n}
+function change(k,dl){const q=Math.max(0,(sel[k]||0)+dl);if(q)sel[k]=q;else delete sel[k];
+ const n=paint();live.textContent=L().mine+": "+n}
+d.addEventListener("click",e=>{const b=e.target.closest("button[data-d]");if(b)change(b.dataset.k,+b.dataset.d)});
+bar.addEventListener("click",()=>dlg.showModal());
+dlg.querySelector(".x").addEventListener("click",()=>dlg.close());
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+dlg.querySelector(".clr").addEventListener("click",()=>{if(confirm(L().clearq)){sel={};paint();dlg.close()}});
+let lock=null;
+dlg.querySelector(".wvb").addEventListener("click",async()=>{dlg.close();wv.hidden=false;d.body.style.overflow="hidden";
+ try{lock=await navigator.wakeLock?.request("screen")}catch(e){}});
+wv.querySelector(".back").addEventListener("click",()=>{wv.hidden=true;d.body.style.overflow="";lock?.release();lock=null;dlg.showModal()});
+paint();
+d.querySelector(".langs").addEventListener("click",()=>paint());
 /* search */
 const q=d.getElementById("q"),items=[...d.querySelectorAll("[data-s]")],secs=[...d.querySelectorAll(".sec")],empty=d.querySelector(".empty");
 const fold=s=>s.toLowerCase().replace(/ə/g,"e").replace(/ı/g,"i").normalize("NFD").replace(/[\u0300-\u036f]/g,"");
