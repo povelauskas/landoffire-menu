@@ -1,0 +1,168 @@
+[
+  {
+    "page": 19,
+    "section": {"lt": "Salotos", "ru": "Салаты", "en": "Salads"},
+    "kind": "dishes",
+    "items": [
+      {"name": "Mangal Salatı", "price": "4.50",
+       "lt": "Ant žarijų kepti pomidorai, paprikos, baklažanai, svogūnai ir česnakai.",
+       "ru": "Помидоры, перец, баклажаны, лук и чеснок, приготовленные на гриле.",
+       "en": "Grilled tomatoes, peppers, eggplant, onions and garlic.",
+       "photo": [0.19, 0.12, 0.80, 0.375], "extra": null},
+      {"name": "Turşu", "price": "2.50",
+       "lt": "Naminiai marinuoti kopūstai.",
+       "ru": "Домашняя маринованная капуста.",
+       "en": "Homemade pickled cabbage.",
+       "photo": [0.14, 0.53, 0.86, 0.87], "extra": null}
+    ],
+    "notes": "Small running header top-right (section continues from previous page)."
+  },
+  {
+    "page": 20,
+    "section": {"lt": "Desertai", "ru": "Десерты", "en": "Desserts"},
+    "kind": "dishes",
+    "items": [
+      {"name": "Azerbaijani Bakhlava", "price": "3.50",
+       "lt": "Azerbaidžanietiška baklava",
+       "ru": "Азербайджанская пахлава",
+       "en": null,
+       "photo": [0.10, 0.35, 0.92, 0.67], "extra": null}
+    ],
+    "notes": "Section opener page with large 'Desertai' title. Dish name is in English; subtitle gives LT / RU only."
+  },
+  {
+    "page": 21,
+    "section": {"lt": "Desertai", "ru": "Десерты", "en": "Desserts"},
+    "kind": "dishes",
+    "items": [
+      {"name": "Turkish Bakhlava", "price": "3.50",
+       "lt": "Turkiška baklava", "ru": "Турецкая пахлава", "en": null,
+       "photo": [0.29, 0.11, 0.92, 0.39], "extra": null},
+      {"name": "Napoleon", "price": "6.50",
+       "lt": "Napoleonas", "ru": "Наполеон", "en": null,
+       "photo": [0.11, 0.51, 0.85, 0.85], "extra": null}
+    ],
+    "notes": "Names in English; subtitles LT / RU only."
+  },
+  {
+    "page": 22,
+    "section": {"lt": "Gėrimai", "ru": "Напитки", "en": "Drinks"},
+    "kind": "drinks",
+    "items": [
+      {"name": "Kazbegi Limonade", "price": "3.80", "lt": "Feichoja; Vynuogės", "ru": "Фейхоа; Виноград", "en": "Feijoa; Grape", "photo": null,
+       "extra": "500 ML. Flavours: Feichoja / Фейхоа / Feijoa; Vynuogės / Виноград / Grape. Group: Nealkoholiniai gėrimai / Безалкогольные напитки / Non-Alcoholic Drinks"},
+      {"name": "Natakhtari Limonade", "price": "3.80", "lt": "Kriaušė; Peletrūnas", "ru": "Груша; Тархун", "en": "Pear; Tarragon", "photo": null,
+       "extra": "500 ML. Flavours: Kriaušė / Груша / Pear; Peletrūnas / Тархун / Tarragon. Group: Nealkoholiniai gėrimai"},
+      {"name": "Bizim Tarla", "price": "5.00", "lt": "Svarainis; Sedula; Vyšnia; Feichoja", "ru": "Айва; Кизил; Вишня; Фейхоа", "en": "Quince; Cornelian cherry; Sour cherry; Feijoa", "photo": null,
+       "extra": "1 L. Subgroup: Kompotai / Компоты / Compotes. Flavours: Svarainis / Айва / Quince; Sedula / Кизил / Cornelian cherry; Vyšnia / Вишня / Sour cherry; Feichoja / Фейхоа / Feijoa"},
+      {"name": "Pomegranate Juice", "price": "6.00", "lt": "Granatų sultys", "ru": "Гранатовый сок", "en": "Pomegranate juice", "photo": null,
+       "extra": "Listed beside Bizim Tarla under Kompotai / Компоты / Compotes"},
+      {"name": "Sirab", "price": "2.60", "lt": "Azerbaidžanietiškas mineralinis vanduo", "ru": "Азербайджанская минеральная вода", "en": "Azerbaijani mineral water", "photo": null, "extra": "500 ML"},
+      {"name": "Coca-Cola", "price": "2.60", "lt": null, "ru": null, "en": null, "photo": null, "extra": null},
+      {"name": "Sprite", "price": "2.60", "lt": null, "ru": null, "en": null, "photo": null, "extra": null},
+      {"name": "Fanta", "price": "2.60", "lt": null, "ru": null, "en": null, "photo": null, "extra": null},
+      {"name": "Schweppes", "price": "2.20", "lt": null, "ru": null, "en": null, "photo": null, "extra": "250 ML"},
+      {"name": "Red Bull", "price": "3.40", "lt": null, "ru": null, "en": null, "photo": null, "extra": null},
+      {"name": "Baltas sausas", "price": "7.00", "lt": "Baltas sausas", "ru": "Белое сухое", "en": "Dry White Wine", "photo": null,
+       "extra": "150 ML 7.00 € / 750 ML 30.00 €. Group: Alkoholiniai gėrimai / Алкогольные напитки / Alcoholic Drinks; Vynas / Вино / Wine"},
+      {"name": "Baltas pusiau saldus", "price": "7.00", "lt": "Baltas pusiau saldus", "ru": "Белое полусладкое", "en": "Semi-Sweet White Wine", "photo": null,
+       "extra": "150 ML 7.00 € / 750 ML 30.00 €. Vynas / Вино / Wine"},
+      {"name": "Raudonas sausas", "price": "7.00", "lt": "Raudonas sausas", "ru": "Красное сухое", "en": "Dry Red Wine", "photo": null,
+       "extra": "150 ML 7.00 € / 750 ML 30.00 €. Vynas / Вино / Wine"},
+      {"name": "Raudonas pusiau saldus", "price": "7.00", "lt": "Raudonas pusiau saldus", "ru": "Красное полусладкое", "en": "Semi-Sweet Red Wine", "photo": null,
+       "extra": "150 ML 7.00 € / 750 ML 30.00 €. Vynas / Вино / Wine"},
+      {"name": "Martini Asti", "price": "7.00", "lt": null, "ru": null, "en": null, "photo": null,
+       "extra": "150 ML 7.00 € / 750 ML 30.00 €. Putojantis vynas / Игристое вино / Sparkling Wine"}
+    ],
+    "notes": "Drinks section opener. Sub-headings: 'Nealkoholiniai gėrimai / Безалкогольные напитки / Non-Alcoholic Drinks'; 'Kompotai / Компоты / Compotes'; 'Alkoholiniai gėrimai / Алкогольные напитки / Alcoholic Drinks'; 'Vynas / Вино / Wine'; 'Putojantis vynas / Игристое вино / Sparkling Wine'. Wine names are Lithuanian; their lt field repeats the name. Where an item has more than one size, 'price' holds the smallest size and 'extra' lists every size."
+  },
+  {
+    "page": 23,
+    "section": {"lt": "Alkoholiniai gėrimai", "ru": "Алкогольные напитки", "en": "Alcoholic Drinks"},
+    "kind": "drinks",
+    "items": [
+      {"name": "Absolut", "price": "4.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 4.00 € / 500 ML 35.00 €. Degtinė / Водка / Vodka"},
+      {"name": "Absolut", "price": "43.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "0,7 L. Degtinė / Водка / Vodka"},
+      {"name": "Grey Goose", "price": "9.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 9.00 € / 500 ML 70.00 €. Degtinė / Водка / Vodka"},
+      {"name": "Finlandia", "price": "5.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 5.00 € / 500 ML 38.00 €. Degtinė / Водка / Vodka"},
+      {"name": "Danzka", "price": "5.50", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 5.50 € / 500 ML 38.00 €. Degtinė / Водка / Vodka"},
+      {"name": "Nemiroff", "price": "4.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 4.00 € / 700 ML 32.00 €. Degtinė / Водка / Vodka"},
+      {"name": "Finsbury Dry Gin", "price": "4.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 4.00 € / 700 ML 38.00 €. Džinas / Джин / Gin"},
+      {"name": "Captain Morgan Spiced Gold", "price": "4.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML. Romas / Ром / Rum"},
+      {"name": "Jack Daniel's", "price": "6.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 6.00 € / 500 ML 42.00 €. Viskis / Виски / Whisky"},
+      {"name": "William Peel Blended Scotch Whisky", "price": "4.50", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML. Viskis / Виски / Whisky"},
+      {"name": "Ballantine's Finest", "price": "4.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML. Viskis / Виски / Whisky"},
+      {"name": "Chivas Regal Blended Scotch Whisky", "price": "7.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 7.00 € / 500 ML 68.00 €. Viskis / Виски / Whisky"},
+      {"name": "Jameson", "price": "4.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 4.00 € / 500 ML 44.00 €. Viskis / Виски / Whisky"},
+      {"name": "Hennessy", "price": "7.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 7.00 € / 500 ML 72.00 €. Konjakas / Коньяк / Cognac"},
+      {"name": "Jägermeister", "price": "4.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "40 ML 4.00 € / 500 ML 38.00 €. Likeriai ir trauktinės / Ликёры и настойки / Liqueurs & Infusions"},
+      {"name": "Apelsinų likeris", "price": "4.00", "lt": "Apelsinų likeris", "ru": "Апельсиновый ликёр", "en": "Orange Liqueur", "photo": null, "extra": "40 ML. Likeriai ir trauktinės / Ликёры и настойки / Liqueurs & Infusions"},
+      {"name": "Vyšnių likeris su brendžiu", "price": "4.00", "lt": "Vyšnių likeris su brendžiu", "ru": "Вишнёвый ликёр с бренди", "en": "Cherry Liqueur with Brandy", "photo": null, "extra": "40 ML. Likeriai ir trauktinės / Ликёры и настойки / Liqueurs & Infusions"}
+    ],
+    "notes": "No page title; continues the drinks list. Sub-headings: 'Degtinė / Водка / Vodka'; 'Džinas / Джин / Gin'; 'Romas / Ром / Rum'; 'Viskis / Виски / Whisky'; 'Konjakas / Коньяк / Cognac'; 'Likeriai ir trauktinės / Ликёры и настойки / Liqueurs & Infusions'. Absolut is listed twice: 40/500 ML, and a separate 0,7 L bottle at 43.00 €. Where an item has more than one size, 'price' holds the smallest size."
+  },
+  {
+    "page": 24,
+    "section": {"lt": "Alkoholiniai gėrimai", "ru": "Алкогольные напитки", "en": "Alcoholic Drinks"},
+    "kind": "drinks",
+    "items": [
+      {"name": "Gubernija Extra", "price": "4.20", "lt": null, "ru": null, "en": null, "photo": null, "extra": "500 ML. Alus / Пиво / Beer"},
+      {"name": "Gubernija Nefiltruotas", "price": "4.20", "lt": null, "ru": "Нефильтрованное", "en": "Unfiltered", "photo": null, "extra": "500 ML. Alus / Пиво / Beer"},
+      {"name": "Natakhtari Beer Gold", "price": "4.20", "lt": null, "ru": null, "en": null, "photo": null, "extra": "500 ML. Alus / Пиво / Beer"},
+      {"name": "Kayaki", "price": "4.50", "lt": null, "ru": null, "en": null, "photo": null, "extra": "500 ML. Alus / Пиво / Beer"},
+      {"name": "Blanc", "price": "4.20", "lt": null, "ru": null, "en": null, "photo": null, "extra": "330 ML. Alus / Пиво / Beer"},
+      {"name": "Corona Extra", "price": "4.50", "lt": null, "ru": null, "en": null, "photo": null, "extra": "355 ML. Alus / Пиво / Beer"},
+      {"name": "Mažas Alaus Cechas kvietinis", "price": "4.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "330 ML. Alus / Пиво / Beer"},
+      {"name": "Mažas Alaus Cechas tamsus", "price": "4.00", "lt": null, "ru": null, "en": null, "photo": null, "extra": "330 ML. Alus / Пиво / Beer"},
+      {"name": "Gin Tonic", "price": "6.90", "lt": null, "ru": "Джин-тоник", "en": "Gin Tonic", "photo": null, "extra": "Kokteiliai / Коктейли / Cocktails"},
+      {"name": "Cherry Spritz", "price": "7.40", "lt": null, "ru": "Вишнёвый Spritz", "en": "Cherry Spritz", "photo": null, "extra": "Kokteiliai / Коктейли / Cocktails"},
+      {"name": "Cuba Libre", "price": "6.90", "lt": null, "ru": "Куба Либре", "en": "Cuba Libre", "photo": null, "extra": "Kokteiliai / Коктейли / Cocktails"},
+      {"name": "Aperol Spritz", "price": "6.90", "lt": null, "ru": "Апероль Spritz", "en": "Aperol Spritz", "photo": null, "extra": "Kokteiliai / Коктейли / Cocktails"},
+      {"name": "Tropical Passionfruit", "price": "7.90", "lt": null, "ru": "Тропическая маракуйя", "en": "Tropical Passionfruit", "photo": null, "extra": "Kokteiliai / Коктейли / Cocktails"},
+      {"name": "Çay", "price": "2.00", "lt": "Arbata", "ru": "Чай", "en": "Tea", "photo": null, "extra": "Karšti gėrimai / Горячие напитки / Hot Drinks"},
+      {"name": "Espresso", "price": "2.80", "lt": "Espresso", "ru": "Эспрессо", "en": "Espresso", "photo": null, "extra": "Karšti gėrimai / Горячие напитки / Hot Drinks"},
+      {"name": "Americano", "price": "2.80", "lt": "Americano", "ru": "Американо", "en": "Americano", "photo": null, "extra": "Karšti gėrimai / Горячие напитки / Hot Drinks"},
+      {"name": "Saçaq pendir", "price": "5.50", "lt": "Rūkytas sūris", "ru": "Копчёный сыр", "en": "Smoked cheese", "photo": null, "extra": "Snacks / Закуски / Užkandžiai"},
+      {"name": "Yer Fıstığı", "price": "4.50", "lt": "Žemės riešutai", "ru": "Арахис", "en": "Peanuts", "photo": null, "extra": "Snacks / Закуски / Užkandžiai"},
+      {"name": "Chips", "price": "3.50", "lt": "Traškučiai", "ru": "Чипсы", "en": "Chips", "photo": null, "extra": "Snacks / Закуски / Užkandžiai"}
+    ],
+    "notes": "No page title; continues the drinks list. Sub-headings: 'Alus / Пиво / Beer'; 'Kokteiliai / Коктейли / Cocktails'; 'Karšti gėrimai / Горячие напитки / Hot Drinks'; 'Snacks / Закуски / Užkandžiai' (that heading is in EN / RU / LT order, unlike the others). The cocktails and 'Gubernija Nefiltruotas' have RU / EN subtitles only."
+  },
+  {
+    "page": 25,
+    "section": {"lt": "Meniu gimtadieniui ar banketui", "ru": "Меню на день рождения или банкет", "en": "Birthday or Banquet Menu"},
+    "kind": "other",
+    "items": [
+      {"name": "SET 1", "price": "139.90",
+       "lt": "Šacho plovas × 1; Avienos gabalėlių šašlykas × 2; Maltos mėsos šašlykas × 2; Marinuotos jautienos šašlykas × 1; Vištienos filė šašlykas × 1; Ant žarijų keptų daržovių salotos × 3; Šviežios daržovės su sūriu × 3; Kompotas × 3",
+       "ru": "Шах-плов × 1; Шашлык из баранины кусочками × 2; Люля-кебаб × 2; Шашлык из маринованной говядины × 1; Шашлык из куриного филе × 1; Салат из овощей, приготовленных на гриле × 3; Свежие овощи с сыром × 3; Компот × 3",
+       "en": "Shah Plov × 1; Lamb Shashlik × 2; Minced Meat Shashlik × 2; Marinated Beef Shashlik × 1; Chicken Fillet Shashlik × 1; Grilled Vegetable Salad × 3; Fresh vegetables with cheese × 3; Compote × 3",
+       "photo": null,
+       "extra": "6–7 nəfər üçün / 6–7 žmonėms / на 6–7 человек / for 6–7 people. Lines as printed (AZ / LT / RU / EN): Şah plov / Šacho plovas / Шах-плов / Shah Plov × 1 | Tikə qoyun / Avienos gabalėlių šašlykas / Шашлык из баранины кусочками / Lamb Shashlik × 2 | Lülə / Maltos mėsos šašlykas / Люля-кебаб / Minced Meat Shashlik × 2 | Basdırma / Marinuotos jautienos šašlykas / Шашлык из маринованной говядины / Marinated Beef Shashlik × 1 | Toyuq file / Vištienos filė šašlykas / Шашлык из куриного филе / Chicken Fillet Shashlik × 1 | Mangal salatı / Ant žarijų keptų daržovių salotos / Салат из овощей, приготовленных на гриле / Grilled Vegetable Salad × 3 | Çoban salatı / Šviežios daržovės su sūriu / Свежие овощи с сыром / Fresh vegetables with cheese × 3 | Kompot / Kompotas / Компот / Compote × 3"},
+      {"name": "SET 2", "price": "189.90",
+       "lt": "Šacho plovas × 2; Avienos gabalėlių šašlykas × 2; Maltos mėsos šašlykas × 2; Marinuotos jautienos šašlykas × 2; Vištienos filė šašlykas × 2; Ant žarijų keptų daržovių salotos × 3; Šviežios daržovės su sūriu × 3; Kompotas × 3",
+       "ru": "Шах-плов × 2; Шашлык из баранины кусочками × 2; Люля-кебаб × 2; Шашлык из маринованной говядины × 2; Шашлык из куриного филе × 2; Салат из овощей, приготовленных на гриле × 3; Свежие овощи с сыром × 3; Компот × 3",
+       "en": "Shah Plov × 2; Lamb Shashlik × 2; Minced Meat Shashlik × 2; Marinated Beef Shashlik × 2; Chicken Fillet Shashlik × 2; Grilled Vegetable Salad × 3; Fresh vegetables with cheese × 3; Compote × 3",
+       "photo": null,
+       "extra": "8–10 nəfər üçün / 8–10 žmonėms / на 8–10 человек / for 8–10 people. Lines as printed (AZ / LT / RU / EN): Şah plov / Šacho plovas / Шах-плов / Shah Plov × 2 | Tikə qoyun / Avienos gabalėlių šašlykas / Шашлык из баранины кусочками / Lamb Shashlik × 2 | Lülə / Maltos mėsos šašlykas / Люля-кебаб / Minced Meat Shashlik × 2 | Basdırma / Marinuotos jautienos šašlykas / Шашлык из маринованной говядины / Marinated Beef Shashlik × 2 | Toyuq file / Vištienos filė šašlykas / Шашлык из куриного филе / Chicken Fillet Shashlik × 2 | Mangal salatı / Ant žarijų keptų daržovių salotos / Салат из овощей, приготовленных на гриле / Grilled Vegetable Salad × 3 | Çoban salatı / Šviežios daržovės su sūriu / Свежие овощи с сыром / Fresh vegetables with cheese × 3 | Kompot / Kompotas / Компот / Compote × 3"},
+      {"name": "Canlı musiqi", "price": "60.00",
+       "lt": "Gyva muzika. lietuvių, rusų, anglų ir azerbaidžaniečių kalbomis. 60 € / val. – mažiausiai 2 val.",
+       "ru": "Живая музыка. на литовском, русском, английском и азербайджанском языках. 60 € / час – минимум 2 часа",
+       "en": "Live Music. in Lithuanian, Russian, English and Azerbaijani. 60 € / hour – minimum 2 hours",
+       "photo": null,
+       "extra": "Per hour, minimum 2 hours. AZ: Canlı musiqi; Litovca, rusca, ingiliscə və azərbaycanca; 60 € / saat – minimum 2 saat. Heading: Əlavələr / Papildomai / Дополнительно / Extras"},
+      {"name": "Napoleon tortu", "price": "35.00",
+       "lt": "Napoleono tortas", "ru": "Торт «Наполеон»", "en": "Napoleon Cake",
+       "photo": null,
+       "extra": "Per kg (35 € / kg). Heading: Əlavələr / Papildomai / Дополнительно / Extras"}
+    ],
+    "notes": "Banquet / set-menu page. Subtitle line has four languages: 'Menu ad günü və ya banket / Меню на день рождения или банкет / Birthday or Banquet Menu' (first part is Azerbaijani). Items on this page are printed as single lines in AZ / LT / RU / EN order; for the sets, lt/ru/en hold each language's components joined by '; ' and 'extra' keeps the exact printed lines."
+  },
+  {
+    "page": 26,
+    "section": {"lt": null, "ru": null, "en": null},
+    "kind": "other",
+    "items": [],
+    "notes": "Back cover: red curtain background, centred white Land of Fire logo (flame in an arch) with 'LAND OF FIRE' and '→ AZERBAIJANI CUISINE ←' beneath. Bottom: Instagram icon + 'landoffire.vilnius'. No address, phone or opening hours printed."
+  }
+]

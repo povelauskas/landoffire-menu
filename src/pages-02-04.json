@@ -1,0 +1,14 @@
+[
+{"page":2,"section":{"lt":"Šašlykai","ru":"Шашлыки","en":"Kebabs"},"kind":"dishes","items":[
+ {"name":"Lülə","price":"13.30","lt":"Maltos mėsos šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.","ru":"Кебаб из рубленого мяса. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.","en":"Grilled minced meat shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.","photo":[0.09,0.26,0.93,0.71]}
+]},
+{"page":3,"section":{"lt":"Šašlykai","ru":"Шашлыки","en":"Kebabs"},"kind":"dishes","items":[
+ {"name":"Basdırma","price":"15.00","lt":"Marinuotas jautienos išpjovos šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.","ru":"Кебаб из маринованной говядины из говяжьей вырезки. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.","en":"Marinated beef shashlik made from beef tenderloin. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.","photo":[0.30,0.05,0.76,0.24]},
+ {"name":"Antrikot","price":"16.50","lt":"Avienos antrekoto šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.","ru":"Кебаб из бараньего антрекота. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.","en":"Lamb ribs shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.","photo":[0.19,0.34,0.65,0.55]},
+ {"name":"Toyuq File","price":"11.50","lt":"Vištienos filė šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.","ru":"Шашлык из куриного филе. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.","en":"Chicken fillet shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.","photo":[0.32,0.64,0.75,0.87]}
+]},
+{"page":4,"section":{"lt":"Šašlykai","ru":"Шашлыки","en":"Kebabs"},"kind":"dishes","items":[
+ {"name":"Toyuq Qənəd","price":"10.40","lt":"Vištienos sparnelių šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.","ru":"Шашлык из куриных крылышек. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.","en":"Chicken wing shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.","photo":[0.27,0.07,0.87,0.32]},
+ {"name":"Tikə Qoyun","price":"14.30","lt":"Avienos gabalėlių šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.","ru":"Шашлык из кусочков баранины. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.","en":"Lamb chunks shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.","photo":[0.11,0.49,0.80,0.82]}
+]}
+]

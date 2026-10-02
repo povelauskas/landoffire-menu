@@ -1,0 +1,6 @@
+src/menu.pdf
+src/hi/
+src/pages/
+.vercel
+__pycache__/
+.env*

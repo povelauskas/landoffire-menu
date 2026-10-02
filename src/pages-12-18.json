@@ -1,0 +1,166 @@
+[
+  {
+    "page": 12,
+    "section": {"lt": "Pagrindiniai Patiekalai", "ru": "Основные блюда", "en": "Hot Dishes"},
+    "kind": "dishes",
+    "items": [
+      {
+        "name": "Tabaka",
+        "price": "17.20",
+        "lt": "Vištiena, kepta prispausta su prieskoniais. Patiekiama su bulvėmis.",
+        "ru": "Цыплёнок, обжаренный под прессом со специями. Подаётся с картофелем.",
+        "en": "Chicken pressed and fried with spices. Served with potatoes.",
+        "photo": [0.24, 0.075, 0.91, 0.375],
+        "extra": null
+      },
+      {
+        "name": "Toyuq Sac",
+        "price": "13.30",
+        "lt": "Vištiena, paruošta ant tradicinio sadžo su grybais, pomidorais, bulvėmis, baklažanais ir saldžiąja paprika. Patiekiama su duona.",
+        "ru": "Курица, приготовленная на традиционном садже с грибами, помидорами, картофелем, баклажанами и болгарским перцем.",
+        "en": "Chicken cooked on a traditional saj with mushrooms, tomatoes, potatoes, eggplant and bell peppers. Served with bread.",
+        "photo": [0.055, 0.455, 0.705, 0.83],
+        "extra": null
+      }
+    ],
+    "notes": "Small section header top-left. Name printed 'Sac' without cedilla. RU text for Toyuq Sac has no 'served with bread' sentence."
+  },
+  {
+    "page": 13,
+    "section": {"lt": "Pagrindiniai Patiekalai", "ru": "Основные блюда", "en": "Hot Dishes"},
+    "kind": "dishes",
+    "items": [
+      {
+        "name": "Quzu Sac",
+        "price": "15.30",
+        "lt": "Aviena, paruošta ant tradicinio sadžo su grybais, pomidorais, bulvėmis, baklažanais ir saldžiąja paprika. Patiekiama su duona.",
+        "ru": "Баранина, приготовленная на традиционном садже с грибами, помидорами, картофелем, баклажанами и болгарским перцем.",
+        "en": "Lamb cooked on a traditional saj with mushrooms, tomatoes, potatoes, eggplant and bell peppers. Served with bread.",
+        "photo": [0.13, 0.075, 0.85, 0.355],
+        "extra": null
+      },
+      {
+        "name": "Şah Plov",
+        "price": "30.00",
+        "lt": "Tradicinis azerbaidžanietiškas šafrano ryžių plovas su aviena, kaštonais, džiovintais abrikosais, razinomis ir traškia lavašo plutele. (3–4 žmonėms. Užsakoma prieš 2 valandas)",
+        "ru": "Традиционный азербайджанский шафрановый рис с бараниной, каштанами, курагой, изюмом и хрустящей корочкой из лаваша. (На 3–4 человека. Заказывать за 2 часа)",
+        "en": "Traditional Azerbaijani saffron rice pilaf with lamb, chestnuts, dried apricots, raisins and a crispy lavash crust. – 30.00 € . (3–4 people. Must be ordered 2 hours in advance)",
+        "photo": [0.125, 0.5, 0.755, 0.83],
+        "extra": "Serves 3–4 people; must be ordered 2 hours in advance"
+      }
+    ],
+    "notes": "Section header top-right. EN text of Şah Plov repeats the price inline ('– 30.00 € .') — copied as printed. RU text for Quzu Sac has no 'served with bread' sentence."
+  },
+  {
+    "page": 14,
+    "section": {"lt": "Sriubos", "ru": "Супы", "en": "Soups"},
+    "kind": "dishes",
+    "items": [
+      {
+        "name": "Düşbərə",
+        "price": "6.00",
+        "lt": "Tradicinė azerbaidžanietiška sriuba su mažais mėsos kukuliais. Pateikiama su duona.",
+        "ru": "Традиционный азербайджанский суп с маленькими мясными пельменями. Подаётся с хлебом.",
+        "en": "Traditional azerbaijani soup with small meat dumplings. Served with bread.",
+        "photo": [0.075, 0.335, 0.785, 0.705],
+        "extra": "Two sizes: 6.00 € Small / Maža / Маленькая; 8.90 € Large / Didelė / Большая"
+      }
+    ],
+    "notes": "Section opener page with large 'Sriubos' title. Photo box excludes the glass vinegar carafe beside the bowl (approx [0.64,0.115,0.895,0.44]). LT uses 'Pateikiama' (not 'Patiekiama') as printed."
+  },
+  {
+    "page": 15,
+    "section": {"lt": "Sriubos", "ru": "Супы", "en": "Soups"},
+    "kind": "dishes",
+    "items": [
+      {
+        "name": "Mərci Supu",
+        "price": "3.50",
+        "lt": "Lęšių sriuba su tradiciniais prieskoniais. Pateikiama su duona.",
+        "ru": "Суп из чечевицы с традиционными специями. Подаётся с хлебом.",
+        "en": "Lentil soup with traditional spices. Served with bread.",
+        "photo": [0.15, 0.088, 0.67, 0.345],
+        "extra": "Two sizes: 3.50 € Small / Maža / Маленькая; 5.50 € Large / Didelė / Большая"
+      },
+      {
+        "name": "Toyuq Supu",
+        "price": "3.50",
+        "lt": "Vištienos sriuba su bulvėmis. Pateikiama su duona.",
+        "ru": "Куриный суп с картофелем. Подаётся с хлебом.",
+        "en": "Chicken soup with potatoes. Served with bread.",
+        "photo": [0.315, 0.48, 0.945, 0.825],
+        "extra": "Two sizes: 3.50 € Small / Maža / Маленькая; 5.50 € Large / Didelė / Большая"
+      }
+    ],
+    "notes": "Section header top-right. Price field holds the Small price."
+  },
+  {
+    "page": 16,
+    "section": {"lt": "Garnyrai", "ru": "Гарниры", "en": "Side Dishes"},
+    "kind": "dishes",
+    "items": [
+      {
+        "name": "Çörək",
+        "price": "1.50",
+        "lt": "Duona",
+        "ru": "Хлеб",
+        "en": "Bread",
+        "photo": [0.185, 0.165, 0.785, 0.535],
+        "extra": null
+      },
+      {
+        "name": "Kartof Fri",
+        "price": "3.50",
+        "lt": "Bulvytės fri",
+        "ru": "Картофель фри",
+        "en": "French fries",
+        "photo": [0.075, 0.505, 0.81, 0.86],
+        "extra": null
+      }
+    ],
+    "notes": "Section opener page with large 'Garnyrai' title. Descriptions are single lines 'LT / RU / EN'. Photo boxes overlap slightly (fry basket handle reaches up beside the bread basket)."
+  },
+  {
+    "page": 17,
+    "section": {"lt": "Garnyrai", "ru": "Гарниры", "en": "Side Dishes"},
+    "kind": "dishes",
+    "items": [
+      {
+        "name": "Kənd Sayağı",
+        "price": "4.00",
+        "lt": "Kaimiško stiliaus keptos bulvės",
+        "ru": "Жареный картофель по-деревенски",
+        "en": "Country-style fried potatoes",
+        "photo": [0.235, 0.045, 0.76, 0.375],
+        "extra": null
+      },
+      {
+        "name": "Düyü",
+        "price": "3.50",
+        "lt": "Basmati ryžiai",
+        "ru": "Бasmati düyüsü",
+        "en": "Basmati Rice",
+        "photo": [0.115, 0.505, 0.795, 0.83],
+        "extra": null
+      }
+    ],
+    "notes": "Section header top-right. Düyü line is printed in EN / 'RU' / LT order as 'Basmati Rice / Бasmati düyüsü / Basmati ryžiai'; the middle part is a mixed Cyrillic 'Б' + Latin/Azerbaijani 'asmati düyüsü' (likely a typo for 'Басмати рис'), copied as printed."
+  },
+  {
+    "page": 18,
+    "section": {"lt": "Salotos", "ru": "Салаты", "en": "Salads"},
+    "kind": "dishes",
+    "items": [
+      {
+        "name": "Çoban Salatı",
+        "price": "4.50",
+        "lt": "Šviežios daržovės su sūriu.",
+        "ru": "Свежие овощи с сыром.",
+        "en": "Fresh vegetables with cheese.",
+        "photo": [0.115, 0.31, 0.89, 0.665],
+        "extra": null
+      }
+    ],
+    "notes": "Section opener page with large 'Salotos' title."
+  }
+]

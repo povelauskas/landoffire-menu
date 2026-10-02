@@ -1,0 +1,1421 @@
+{
+ "info": {
+  "instagram": "landoffire.vilnius",
+  "footer_html": "<p><a href=\"https://www.instagram.com/landoffire.vilnius/\" rel=\"noopener\">Instagram @landoffire.vilnius</a></p>"
+ },
+ "sections": [
+  {
+   "id": "kebabai",
+   "title": {
+    "lt": "Šašlykai",
+    "ru": "Шашлыки",
+    "en": "Kebabs"
+   },
+   "items": [
+    {
+     "name": "Lülə",
+     "page": 2,
+     "lt": "Maltos mėsos šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.",
+     "ru": "Кебаб из рубленого мяса. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.",
+     "en": "Grilled minced meat shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.",
+     "photo": [
+      0.09,
+      0.26,
+      0.93,
+      0.71
+     ],
+     "price": "13.30"
+    },
+    {
+     "name": "Basdırma",
+     "page": 3,
+     "lt": "Marinuotas jautienos išpjovos šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.",
+     "ru": "Кебаб из маринованной говядины из говяжьей вырезки. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.",
+     "en": "Marinated beef shashlik made from beef tenderloin. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.",
+     "photo": [
+      0.3,
+      0.05,
+      0.76,
+      0.24
+     ],
+     "price": "15.00"
+    },
+    {
+     "name": "Antrikot",
+     "page": 3,
+     "lt": "Avienos antrekoto šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.",
+     "ru": "Кебаб из бараньего антрекота. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.",
+     "en": "Lamb ribs shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.",
+     "photo": [
+      0.19,
+      0.34,
+      0.65,
+      0.55
+     ],
+     "price": "16.50"
+    },
+    {
+     "name": "Toyuq File",
+     "page": 3,
+     "lt": "Vištienos filė šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.",
+     "ru": "Шашлык из куриного филе. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.",
+     "en": "Chicken fillet shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.",
+     "photo": [
+      0.32,
+      0.64,
+      0.75,
+      0.87
+     ],
+     "price": "11.50"
+    },
+    {
+     "name": "Toyuq Qənəd",
+     "page": 4,
+     "lt": "Vištienos sparnelių šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.",
+     "ru": "Шашлык из куриных крылышек. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.",
+     "en": "Chicken wing shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.",
+     "photo": [
+      0.27,
+      0.07,
+      0.87,
+      0.32
+     ],
+     "price": "10.40"
+    },
+    {
+     "name": "Tikə Qoyun",
+     "page": 4,
+     "lt": "Avienos gabalėlių šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.",
+     "ru": "Шашлык из кусочков баранины. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.",
+     "en": "Lamb chunks shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.",
+     "photo": [
+      0.11,
+      0.49,
+      0.8,
+      0.82
+     ],
+     "price": "14.30"
+    },
+    {
+     "name": "Mal Ürəyi",
+     "page": 5,
+     "lt": "Jautienos širdies šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.",
+     "ru": "Шашлык из говяжьего сердца. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.",
+     "en": "Beef heart shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.",
+     "photo": [
+      0.26,
+      0.08,
+      0.825,
+      0.335
+     ],
+     "price": "10.90"
+    },
+    {
+     "name": "Lülə (Hinduşka)",
+     "page": 5,
+     "lt": "Kalakutienos maltos mėsos šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.",
+     "ru": "Шашлык из индюшиного фарша. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.",
+     "en": "Minced turkey shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.",
+     "photo": [
+      0.155,
+      0.505,
+      0.77,
+      0.825
+     ],
+     "price": "11.30"
+    },
+    {
+     "name": "Mal Ciyəri",
+     "page": 6,
+     "lt": "Jautienos kepenėlių šašlykas. Ant žarijų keptas pomidoras ir aitrioji ilgoji paprika, lavašas ir šašlyko salotos.",
+     "ru": "Шашлык из говяжьей печени. Помидор и острый длинный перец, приготовленные на мангале, лаваш и салат шашлыка.",
+     "en": "Beef liver shashlik. Served with grilled tomatoes, hot long pepper, lavash and shashlik salad.",
+     "photo": [
+      0.29,
+      0.09,
+      0.87,
+      0.375
+     ],
+     "price": "10.90"
+    },
+    {
+     "name": "Balıq",
+     "page": 6,
+     "lt": "Skumbrė su naršarabu ir salotomis.",
+     "ru": "Скумбрия с наршарабом и салатом.",
+     "en": "Mackerel with narsharab sauce and salad.",
+     "photo": [
+      0.135,
+      0.515,
+      0.79,
+      0.865
+     ],
+     "price": "15.20"
+    },
+    {
+     "name": "Kartof",
+     "page": 7,
+     "lt": "Bulvės ir avienos uodegos riebalai.",
+     "ru": "Картофель и курдючный жир.",
+     "en": "Potatoes with lamb tail fat.",
+     "photo": [
+      0.22,
+      0.1,
+      0.86,
+      0.38
+     ],
+     "price": "7.00"
+    },
+    {
+     "name": "Quyruq",
+     "page": 7,
+     "lt": "Avienos uodegos riebalai.",
+     "ru": "Курдючный жир.",
+     "en": "Lamb tail fat.",
+     "photo": [
+      0.1,
+      0.485,
+      0.835,
+      0.83
+     ],
+     "price": "11.00"
+    }
+   ]
+  },
+  {
+   "id": "karsti",
+   "title": {
+    "lt": "Pagrindiniai Patiekalai",
+    "ru": "Основные блюда",
+    "en": "Hot Dishes"
+   },
+   "items": [
+    {
+     "name": "Buğlama",
+     "page": 8,
+     "lt": "Avienos mėsa su saldžiąja paprika, pomidorais. Pateikiama su duona.",
+     "ru": "Мясо баранины с болгарским перцем, помидорами. Подается с хлебом.",
+     "en": "Lamb meat with bell peppers and tomatoes. Served with bread.",
+     "photo": [
+      0.085,
+      0.385,
+      0.925,
+      0.69
+     ],
+     "price": "13.80"
+    },
+    {
+     "name": "Kiftə Bozbaş",
+     "page": 9,
+     "lt": "Mėsos kukulis su avinžirniais, bulvėmis, žalumynais ir tradiciniais prieskoniais. Patiekiama su duona.",
+     "ru": "Фрикаделька из мяса с нутом, картофелем, зеленью и традиционными специями. Подаётся с хлебом.",
+     "en": "Meatball with chickpeas, potatoes, herbs and traditional spices. Served with bread.",
+     "photo": [
+      0.235,
+      0.1,
+      0.72,
+      0.36
+     ],
+     "price": "11.80"
+    },
+    {
+     "name": "Piti",
+     "page": 9,
+     "lt": "Aviena su avinžirniais, bulvėmis, kaštonais ir tradiciniais prieskoniais. Troškinama moliniame puode 5 valandas. Pateikiama su duona.",
+     "ru": "Баранина с нутом, картофелем, каштанами и традиционными специями. Томится в глиняном горшке в течение 5 часов. Подаётся с хлебом.",
+     "en": "Lamb with chickpeas, potatoes, chestnuts and traditional spices. Slow-cooked in a clay pot for 5 hours. Served with bread.",
+     "photo": [
+      0.1,
+      0.49,
+      0.81,
+      0.8
+     ],
+     "price": "13.80"
+    },
+    {
+     "name": "Üç Bacı Dolması",
+     "page": 10,
+     "lt": "Įdaryti baklažanai, pomidorai ir saldžiosios paprikos su malta mėsa. Pateikiama su duona.",
+     "ru": "Фаршированные баклажаны, помидоры и болгарский перец с мясом. Подаётся с хлебом.",
+     "en": "Stuffed eggplant, tomatoes and bell peppers with minced meat. Served with bread.",
+     "photo": [
+      0.33,
+      0.11,
+      0.955,
+      0.35
+     ],
+     "price": "12.30"
+    },
+    {
+     "name": "Yarpaq Dolması",
+     "page": 10,
+     "lt": "Vynuogių lapai, įdaryti malta mėsa ir ryžiais. Pateikiama su duona.",
+     "ru": "Виноградные листья, фаршированные мясом и рисом. Подаётся с хлебом.",
+     "en": "Grape leaves stuffed with minced meat and rice. Served with bread.",
+     "photo": [
+      0.23,
+      0.525,
+      0.94,
+      0.78
+     ],
+     "price": "12.30"
+    },
+    {
+     "name": "Aş Qara",
+     "page": 11,
+     "lt": "Ryžiai su traškia plutele, patiekiami su mėsa ir tradiciniais priedais.",
+     "ru": "Рис с хрустящей корочкой, подаваемый с мясом и традиционными добавками.",
+     "en": "Rice with a crispy crust, served with meat and traditional accompaniments.",
+     "photo": [
+      0.32,
+      0.09,
+      0.81,
+      0.25
+     ],
+     "price": "11.80"
+    },
+    {
+     "name": "Bakı Xəngəli",
+     "page": 11,
+     "lt": "Tešlos lakštai su mėsa, jogurtiniu padažu ir tradiciniais priedais.",
+     "ru": "Листы теста с мясом, йогуртовым соусом и традиционными добавками.",
+     "en": "Layers of dough with meat, yogurt sauce and traditional accompaniments.",
+     "photo": [
+      0.1,
+      0.345,
+      0.57,
+      0.55
+     ],
+     "price": "12.80"
+    },
+    {
+     "name": "Tava Kotleti",
+     "page": 11,
+     "lt": "Keptas mėsos kotletas ir keptos bulvės. Patiekiama su duona.",
+     "ru": "Жареный мясной котлет и жареный картофель. Подается с хлебом.",
+     "en": "Fried meat cutlet with fried potatoes. Served with bread.",
+     "photo": [
+      0.385,
+      0.625,
+      0.865,
+      0.87
+     ],
+     "price": "12.20"
+    },
+    {
+     "name": "Tabaka",
+     "page": 12,
+     "lt": "Vištiena, kepta prispausta su prieskoniais. Patiekiama su bulvėmis.",
+     "ru": "Цыплёнок, обжаренный под прессом со специями. Подаётся с картофелем.",
+     "en": "Chicken pressed and fried with spices. Served with potatoes.",
+     "photo": [
+      0.24,
+      0.075,
+      0.91,
+      0.375
+     ],
+     "price": "17.20"
+    },
+    {
+     "name": "Toyuq Sac",
+     "page": 12,
+     "lt": "Vištiena, paruošta ant tradicinio sadžo su grybais, pomidorais, bulvėmis, baklažanais ir saldžiąja paprika. Patiekiama su duona.",
+     "ru": "Курица, приготовленная на традиционном садже с грибами, помидорами, картофелем, баклажанами и болгарским перцем.",
+     "en": "Chicken cooked on a traditional saj with mushrooms, tomatoes, potatoes, eggplant and bell peppers. Served with bread.",
+     "photo": [
+      0.055,
+      0.455,
+      0.68,
+      0.8
+     ],
+     "price": "13.30"
+    },
+    {
+     "name": "Quzu Sac",
+     "page": 13,
+     "lt": "Aviena, paruošta ant tradicinio sadžo su grybais, pomidorais, bulvėmis, baklažanais ir saldžiąja paprika. Patiekiama su duona.",
+     "ru": "Баранина, приготовленная на традиционном садже с грибами, помидорами, картофелем, баклажанами и болгарским перцем.",
+     "en": "Lamb cooked on a traditional saj with mushrooms, tomatoes, potatoes, eggplant and bell peppers. Served with bread.",
+     "photo": [
+      0.13,
+      0.095,
+      0.85,
+      0.325
+     ],
+     "price": "15.30"
+    },
+    {
+     "name": "Şah Plov",
+     "page": 13,
+     "lt": "Tradicinis azerbaidžanietiškas šafrano ryžių plovas su aviena, kaštonais, džiovintais abrikosais, razinomis ir traškia lavašo plutele. (3–4 žmonėms. Užsakoma prieš 2 valandas)",
+     "ru": "Традиционный азербайджанский шафрановый рис с бараниной, каштанами, курагой, изюмом и хрустящей корочкой из лаваша. (На 3–4 человека. Заказывать за 2 часа)",
+     "en": "Traditional Azerbaijani saffron rice pilaf with lamb, chestnuts, dried apricots, raisins and a crispy lavash crust. (3–4 people. Must be ordered 2 hours in advance)",
+     "photo": [
+      0.125,
+      0.5,
+      0.72,
+      0.83
+     ],
+     "price": "30.00"
+    }
+   ]
+  },
+  {
+   "id": "sriubos",
+   "title": {
+    "lt": "Sriubos",
+    "ru": "Супы",
+    "en": "Soups"
+   },
+   "items": [
+    {
+     "name": "Düşbərə",
+     "page": 14,
+     "lt": "Tradicinė azerbaidžanietiška sriuba su mažais mėsos kukuliais. Pateikiama su duona.",
+     "ru": "Традиционный азербайджанский суп с маленькими мясными пельменями. Подаётся с хлебом.",
+     "en": "Traditional azerbaijani soup with small meat dumplings. Served with bread.",
+     "photo": [
+      0.075,
+      0.335,
+      0.785,
+      0.705
+     ],
+     "sizes": [
+      {
+       "label": {
+        "lt": "Maža",
+        "ru": "Маленькая",
+        "en": "Small"
+       },
+       "price": "6.00"
+      },
+      {
+       "label": {
+        "lt": "Didelė",
+        "ru": "Большая",
+        "en": "Large"
+       },
+       "price": "8.90"
+      }
+     ]
+    },
+    {
+     "name": "Mərci Supu",
+     "page": 15,
+     "lt": "Lęšių sriuba su tradiciniais prieskoniais. Pateikiama su duona.",
+     "ru": "Суп из чечевицы с традиционными специями. Подаётся с хлебом.",
+     "en": "Lentil soup with traditional spices. Served with bread.",
+     "photo": [
+      0.15,
+      0.088,
+      0.67,
+      0.345
+     ],
+     "sizes": [
+      {
+       "label": {
+        "lt": "Maža",
+        "ru": "Маленькая",
+        "en": "Small"
+       },
+       "price": "3.50"
+      },
+      {
+       "label": {
+        "lt": "Didelė",
+        "ru": "Большая",
+        "en": "Large"
+       },
+       "price": "5.50"
+      }
+     ]
+    },
+    {
+     "name": "Toyuq Supu",
+     "page": 15,
+     "lt": "Vištienos sriuba su bulvėmis. Pateikiama su duona.",
+     "ru": "Куриный суп с картофелем. Подаётся с хлебом.",
+     "en": "Chicken soup with potatoes. Served with bread.",
+     "photo": [
+      0.315,
+      0.48,
+      0.945,
+      0.825
+     ],
+     "sizes": [
+      {
+       "label": {
+        "lt": "Maža",
+        "ru": "Маленькая",
+        "en": "Small"
+       },
+       "price": "3.50"
+      },
+      {
+       "label": {
+        "lt": "Didelė",
+        "ru": "Большая",
+        "en": "Large"
+       },
+       "price": "5.50"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "garnyrai",
+   "title": {
+    "lt": "Garnyrai",
+    "ru": "Гарниры",
+    "en": "Side Dishes"
+   },
+   "items": [
+    {
+     "name": "Çörək",
+     "page": 16,
+     "lt": "Duona",
+     "ru": "Хлеб",
+     "en": "Bread",
+     "photo": [
+      0.185,
+      0.185,
+      0.75,
+      0.535
+     ],
+     "price": "1.50"
+    },
+    {
+     "name": "Kartof Fri",
+     "page": 16,
+     "lt": "Bulvytės fri",
+     "ru": "Картофель фри",
+     "en": "French fries",
+     "photo": [
+      0.1,
+      0.555,
+      0.81,
+      0.83
+     ],
+     "price": "3.50"
+    },
+    {
+     "name": "Kənd Sayağı",
+     "page": 17,
+     "lt": "Kaimiško stiliaus keptos bulvės",
+     "ru": "Жареный картофель по-деревенски",
+     "en": "Country-style fried potatoes",
+     "photo": [
+      0.235,
+      0.045,
+      0.76,
+      0.375
+     ],
+     "price": "4.00"
+    },
+    {
+     "name": "Düyü",
+     "page": 17,
+     "lt": "Basmati ryžiai",
+     "ru": "Рис басмати",
+     "en": "Basmati Rice",
+     "photo": [
+      0.115,
+      0.505,
+      0.795,
+      0.83
+     ],
+     "price": "3.50"
+    }
+   ]
+  },
+  {
+   "id": "salotos",
+   "title": {
+    "lt": "Salotos",
+    "ru": "Салаты",
+    "en": "Salads"
+   },
+   "items": [
+    {
+     "name": "Çoban Salatı",
+     "page": 18,
+     "lt": "Šviežios daržovės su sūriu.",
+     "ru": "Свежие овощи с сыром.",
+     "en": "Fresh vegetables with cheese.",
+     "photo": [
+      0.115,
+      0.31,
+      0.89,
+      0.665
+     ],
+     "price": "4.50"
+    },
+    {
+     "name": "Mangal Salatı",
+     "page": 19,
+     "lt": "Ant žarijų kepti pomidorai, paprikos, baklažanai, svogūnai ir česnakai.",
+     "ru": "Помидоры, перец, баклажаны, лук и чеснок, приготовленные на гриле.",
+     "en": "Grilled tomatoes, peppers, eggplant, onions and garlic.",
+     "photo": [
+      0.19,
+      0.12,
+      0.8,
+      0.375
+     ],
+     "price": "4.50"
+    },
+    {
+     "name": "Turşu",
+     "page": 19,
+     "lt": "Naminiai marinuoti kopūstai.",
+     "ru": "Домашняя маринованная капуста.",
+     "en": "Homemade pickled cabbage.",
+     "photo": [
+      0.14,
+      0.53,
+      0.8,
+      0.845
+     ],
+     "price": "2.50"
+    }
+   ]
+  },
+  {
+   "id": "desertai",
+   "title": {
+    "lt": "Desertai",
+    "ru": "Десерты",
+    "en": "Desserts"
+   },
+   "items": [
+    {
+     "name": "Azerbaijani Bakhlava",
+     "page": 20,
+     "lt": "Azerbaidžanietiška baklava",
+     "ru": "Азербайджанская пахлава",
+     "photo": [
+      0.1,
+      0.35,
+      0.92,
+      0.67
+     ],
+     "price": "3.50"
+    },
+    {
+     "name": "Turkish Bakhlava",
+     "page": 21,
+     "lt": "Turkiška baklava",
+     "ru": "Турецкая пахлава",
+     "photo": [
+      0.29,
+      0.11,
+      0.92,
+      0.39
+     ],
+     "price": "3.50"
+    },
+    {
+     "name": "Napoleon",
+     "page": 21,
+     "lt": "Napoleonas",
+     "ru": "Наполеон",
+     "photo": [
+      0.11,
+      0.51,
+      0.81,
+      0.85
+     ],
+     "price": "6.50"
+    }
+   ]
+  },
+  {
+   "id": "gerimai",
+   "title": {
+    "lt": "Gėrimai",
+    "ru": "Напитки",
+    "en": "Drinks"
+   },
+   "items": [
+    {
+     "name": "Kazbegi Limonade",
+     "page": 22,
+     "lt": "Feichoja; Vynuogės",
+     "ru": "Фейхоа; Виноград",
+     "en": "Feijoa; Grape",
+     "volume": "500 ml",
+     "price": "3.80",
+     "group": {
+      "lt": "Nealkoholiniai gėrimai",
+      "ru": "Безалкогольные напитки",
+      "en": "Non-alcoholic drinks"
+     }
+    },
+    {
+     "name": "Natakhtari Limonade",
+     "page": 22,
+     "lt": "Kriaušė; Peletrūnas",
+     "ru": "Груша; Тархун",
+     "en": "Pear; Tarragon",
+     "volume": "500 ml",
+     "price": "3.80",
+     "group": {
+      "lt": "Nealkoholiniai gėrimai",
+      "ru": "Безалкогольные напитки",
+      "en": "Non-alcoholic drinks"
+     }
+    },
+    {
+     "name": "Bizim Tarla",
+     "page": 22,
+     "lt": "Svarainis; Sedula; Vyšnia; Feichoja",
+     "ru": "Айва; Кизил; Вишня; Фейхоа",
+     "en": "Quince; Cornelian cherry; Sour cherry; Feijoa",
+     "volume": "1 l",
+     "price": "5.00",
+     "group": {
+      "lt": "Kompotai",
+      "ru": "Компоты",
+      "en": "Compotes"
+     }
+    },
+    {
+     "name": "Pomegranate Juice",
+     "page": 22,
+     "lt": "Granatų sultys",
+     "ru": "Гранатовый сок",
+     "price": "6.00",
+     "group": {
+      "lt": "Kompotai",
+      "ru": "Компоты",
+      "en": "Compotes"
+     }
+    },
+    {
+     "name": "Sirab",
+     "page": 22,
+     "lt": "Azerbaidžanietiškas mineralinis vanduo",
+     "ru": "Азербайджанская минеральная вода",
+     "en": "Azerbaijani mineral water",
+     "volume": "500 ml",
+     "price": "2.60",
+     "group": {
+      "lt": "Nealkoholiniai gėrimai",
+      "ru": "Безалкогольные напитки",
+      "en": "Non-alcoholic drinks"
+     }
+    },
+    {
+     "name": "Coca-Cola",
+     "page": 22,
+     "price": "2.60",
+     "group": {
+      "lt": "Nealkoholiniai gėrimai",
+      "ru": "Безалкогольные напитки",
+      "en": "Non-alcoholic drinks"
+     }
+    },
+    {
+     "name": "Sprite",
+     "page": 22,
+     "price": "2.60",
+     "group": {
+      "lt": "Nealkoholiniai gėrimai",
+      "ru": "Безалкогольные напитки",
+      "en": "Non-alcoholic drinks"
+     }
+    },
+    {
+     "name": "Fanta",
+     "page": 22,
+     "price": "2.60",
+     "group": {
+      "lt": "Nealkoholiniai gėrimai",
+      "ru": "Безалкогольные напитки",
+      "en": "Non-alcoholic drinks"
+     }
+    },
+    {
+     "name": "Schweppes",
+     "page": 22,
+     "volume": "250 ml",
+     "price": "2.20",
+     "group": {
+      "lt": "Nealkoholiniai gėrimai",
+      "ru": "Безалкогольные напитки",
+      "en": "Non-alcoholic drinks"
+     }
+    },
+    {
+     "name": "Red Bull",
+     "page": 22,
+     "price": "3.40",
+     "group": {
+      "lt": "Nealkoholiniai gėrimai",
+      "ru": "Безалкогольные напитки",
+      "en": "Non-alcoholic drinks"
+     }
+    },
+    {
+     "name": "Baltas sausas",
+     "page": 22,
+     "ru": "Белое сухое",
+     "en": "Dry White Wine",
+     "sizes": [
+      {
+       "label": "150 ml",
+       "price": "7.00"
+      },
+      {
+       "label": "750 ml",
+       "price": "30.00"
+      }
+     ],
+     "group": {
+      "lt": "Vynas",
+      "ru": "Вино",
+      "en": "Wine"
+     }
+    },
+    {
+     "name": "Baltas pusiau saldus",
+     "page": 22,
+     "ru": "Белое полусладкое",
+     "en": "Semi-Sweet White Wine",
+     "sizes": [
+      {
+       "label": "150 ml",
+       "price": "7.00"
+      },
+      {
+       "label": "750 ml",
+       "price": "30.00"
+      }
+     ],
+     "group": {
+      "lt": "Vynas",
+      "ru": "Вино",
+      "en": "Wine"
+     }
+    },
+    {
+     "name": "Raudonas sausas",
+     "page": 22,
+     "ru": "Красное сухое",
+     "en": "Dry Red Wine",
+     "sizes": [
+      {
+       "label": "150 ml",
+       "price": "7.00"
+      },
+      {
+       "label": "750 ml",
+       "price": "30.00"
+      }
+     ],
+     "group": {
+      "lt": "Vynas",
+      "ru": "Вино",
+      "en": "Wine"
+     }
+    },
+    {
+     "name": "Raudonas pusiau saldus",
+     "page": 22,
+     "ru": "Красное полусладкое",
+     "en": "Semi-Sweet Red Wine",
+     "sizes": [
+      {
+       "label": "150 ml",
+       "price": "7.00"
+      },
+      {
+       "label": "750 ml",
+       "price": "30.00"
+      }
+     ],
+     "group": {
+      "lt": "Vynas",
+      "ru": "Вино",
+      "en": "Wine"
+     }
+    },
+    {
+     "name": "Martini Asti",
+     "page": 22,
+     "sizes": [
+      {
+       "label": "150 ml",
+       "price": "7.00"
+      },
+      {
+       "label": "750 ml",
+       "price": "30.00"
+      }
+     ],
+     "group": {
+      "lt": "Putojantis vynas",
+      "ru": "Игристое вино",
+      "en": "Sparkling wine"
+     }
+    },
+    {
+     "name": "Absolut",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "4.00"
+      },
+      {
+       "label": "500 ml",
+       "price": "35.00"
+      }
+     ],
+     "group": {
+      "lt": "Degtinė",
+      "ru": "Водка",
+      "en": "Vodka"
+     }
+    },
+    {
+     "name": "Absolut",
+     "page": 23,
+     "volume": "0,7 l",
+     "price": "43.00",
+     "group": {
+      "lt": "Degtinė",
+      "ru": "Водка",
+      "en": "Vodka"
+     }
+    },
+    {
+     "name": "Grey Goose",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "9.00"
+      },
+      {
+       "label": "500 ml",
+       "price": "70.00"
+      }
+     ],
+     "group": {
+      "lt": "Degtinė",
+      "ru": "Водка",
+      "en": "Vodka"
+     }
+    },
+    {
+     "name": "Finlandia",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "5.00"
+      },
+      {
+       "label": "500 ml",
+       "price": "38.00"
+      }
+     ],
+     "group": {
+      "lt": "Degtinė",
+      "ru": "Водка",
+      "en": "Vodka"
+     }
+    },
+    {
+     "name": "Danzka",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "5.50"
+      },
+      {
+       "label": "500 ml",
+       "price": "38.00"
+      }
+     ],
+     "group": {
+      "lt": "Degtinė",
+      "ru": "Водка",
+      "en": "Vodka"
+     }
+    },
+    {
+     "name": "Nemiroff",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "4.00"
+      },
+      {
+       "label": "700 ml",
+       "price": "32.00"
+      }
+     ],
+     "group": {
+      "lt": "Degtinė",
+      "ru": "Водка",
+      "en": "Vodka"
+     }
+    },
+    {
+     "name": "Finsbury Dry Gin",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "4.00"
+      },
+      {
+       "label": "700 ml",
+       "price": "38.00"
+      }
+     ],
+     "group": {
+      "lt": "Džinas",
+      "ru": "Джин",
+      "en": "Gin"
+     }
+    },
+    {
+     "name": "Captain Morgan Spiced Gold",
+     "page": 23,
+     "volume": "40 ml",
+     "price": "4.00",
+     "group": {
+      "lt": "Romas",
+      "ru": "Ром",
+      "en": "Rum"
+     }
+    },
+    {
+     "name": "Jack Daniel's",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "6.00"
+      },
+      {
+       "label": "500 ml",
+       "price": "42.00"
+      }
+     ],
+     "group": {
+      "lt": "Viskis",
+      "ru": "Виски",
+      "en": "Whisky"
+     }
+    },
+    {
+     "name": "William Peel Blended Scotch Whisky",
+     "page": 23,
+     "volume": "40 ml",
+     "price": "4.50",
+     "group": {
+      "lt": "Viskis",
+      "ru": "Виски",
+      "en": "Whisky"
+     }
+    },
+    {
+     "name": "Ballantine's Finest",
+     "page": 23,
+     "volume": "40 ml",
+     "price": "4.00",
+     "group": {
+      "lt": "Viskis",
+      "ru": "Виски",
+      "en": "Whisky"
+     }
+    },
+    {
+     "name": "Chivas Regal Blended Scotch Whisky",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "7.00"
+      },
+      {
+       "label": "500 ml",
+       "price": "68.00"
+      }
+     ],
+     "group": {
+      "lt": "Viskis",
+      "ru": "Виски",
+      "en": "Whisky"
+     }
+    },
+    {
+     "name": "Jameson",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "4.00"
+      },
+      {
+       "label": "500 ml",
+       "price": "44.00"
+      }
+     ],
+     "group": {
+      "lt": "Viskis",
+      "ru": "Виски",
+      "en": "Whisky"
+     }
+    },
+    {
+     "name": "Hennessy",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "7.00"
+      },
+      {
+       "label": "500 ml",
+       "price": "72.00"
+      }
+     ],
+     "group": {
+      "lt": "Konjakas",
+      "ru": "Коньяк",
+      "en": "Cognac"
+     }
+    },
+    {
+     "name": "Jägermeister",
+     "page": 23,
+     "sizes": [
+      {
+       "label": "40 ml",
+       "price": "4.00"
+      },
+      {
+       "label": "500 ml",
+       "price": "38.00"
+      }
+     ],
+     "group": {
+      "lt": "Likeriai ir trauktinės",
+      "ru": "Ликёры и настойки",
+      "en": "Liqueurs & infusions"
+     }
+    },
+    {
+     "name": "Apelsinų likeris",
+     "page": 23,
+     "ru": "Апельсиновый ликёр",
+     "en": "Orange Liqueur",
+     "volume": "40 ml",
+     "price": "4.00",
+     "group": {
+      "lt": "Likeriai ir trauktinės",
+      "ru": "Ликёры и настойки",
+      "en": "Liqueurs & infusions"
+     }
+    },
+    {
+     "name": "Vyšnių likeris su brendžiu",
+     "page": 23,
+     "ru": "Вишнёвый ликёр с бренди",
+     "en": "Cherry Liqueur with Brandy",
+     "volume": "40 ml",
+     "price": "4.00",
+     "group": {
+      "lt": "Likeriai ir trauktinės",
+      "ru": "Ликёры и настойки",
+      "en": "Liqueurs & infusions"
+     }
+    },
+    {
+     "name": "Gubernija Extra",
+     "page": 24,
+     "volume": "500 ml",
+     "price": "4.20",
+     "group": {
+      "lt": "Alus",
+      "ru": "Пиво",
+      "en": "Beer"
+     }
+    },
+    {
+     "name": "Gubernija Nefiltruotas",
+     "page": 24,
+     "ru": "Нефильтрованное",
+     "en": "Unfiltered",
+     "volume": "500 ml",
+     "price": "4.20",
+     "group": {
+      "lt": "Alus",
+      "ru": "Пиво",
+      "en": "Beer"
+     }
+    },
+    {
+     "name": "Natakhtari Beer Gold",
+     "page": 24,
+     "volume": "500 ml",
+     "price": "4.20",
+     "group": {
+      "lt": "Alus",
+      "ru": "Пиво",
+      "en": "Beer"
+     }
+    },
+    {
+     "name": "Kayaki",
+     "page": 24,
+     "volume": "500 ml",
+     "price": "4.50",
+     "group": {
+      "lt": "Alus",
+      "ru": "Пиво",
+      "en": "Beer"
+     }
+    },
+    {
+     "name": "Blanc",
+     "page": 24,
+     "volume": "330 ml",
+     "price": "4.20",
+     "group": {
+      "lt": "Alus",
+      "ru": "Пиво",
+      "en": "Beer"
+     }
+    },
+    {
+     "name": "Corona Extra",
+     "page": 24,
+     "volume": "355 ml",
+     "price": "4.50",
+     "group": {
+      "lt": "Alus",
+      "ru": "Пиво",
+      "en": "Beer"
+     }
+    },
+    {
+     "name": "Mažas Alaus Cechas kvietinis",
+     "page": 24,
+     "volume": "330 ml",
+     "price": "4.00",
+     "group": {
+      "lt": "Alus",
+      "ru": "Пиво",
+      "en": "Beer"
+     }
+    },
+    {
+     "name": "Mažas Alaus Cechas tamsus",
+     "page": 24,
+     "volume": "330 ml",
+     "price": "4.00",
+     "group": {
+      "lt": "Alus",
+      "ru": "Пиво",
+      "en": "Beer"
+     }
+    },
+    {
+     "name": "Gin Tonic",
+     "page": 24,
+     "ru": "Джин-тоник",
+     "price": "6.90",
+     "group": {
+      "lt": "Kokteiliai",
+      "ru": "Коктейли",
+      "en": "Cocktails"
+     }
+    },
+    {
+     "name": "Cherry Spritz",
+     "page": 24,
+     "ru": "Вишнёвый Spritz",
+     "price": "7.40",
+     "group": {
+      "lt": "Kokteiliai",
+      "ru": "Коктейли",
+      "en": "Cocktails"
+     }
+    },
+    {
+     "name": "Cuba Libre",
+     "page": 24,
+     "ru": "Куба Либре",
+     "price": "6.90",
+     "group": {
+      "lt": "Kokteiliai",
+      "ru": "Коктейли",
+      "en": "Cocktails"
+     }
+    },
+    {
+     "name": "Aperol Spritz",
+     "page": 24,
+     "ru": "Апероль Spritz",
+     "price": "6.90",
+     "group": {
+      "lt": "Kokteiliai",
+      "ru": "Коктейли",
+      "en": "Cocktails"
+     }
+    },
+    {
+     "name": "Tropical Passionfruit",
+     "page": 24,
+     "ru": "Тропическая маракуйя",
+     "price": "7.90",
+     "group": {
+      "lt": "Kokteiliai",
+      "ru": "Коктейли",
+      "en": "Cocktails"
+     }
+    },
+    {
+     "name": "Çay",
+     "page": 24,
+     "lt": "Arbata",
+     "ru": "Чай",
+     "en": "Tea",
+     "price": "2.00",
+     "group": {
+      "lt": "Karšti gėrimai",
+      "ru": "Горячие напитки",
+      "en": "Hot drinks"
+     }
+    },
+    {
+     "name": "Espresso",
+     "page": 24,
+     "ru": "Эспрессо",
+     "price": "2.80",
+     "group": {
+      "lt": "Karšti gėrimai",
+      "ru": "Горячие напитки",
+      "en": "Hot drinks"
+     }
+    },
+    {
+     "name": "Americano",
+     "page": 24,
+     "ru": "Американо",
+     "price": "2.80",
+     "group": {
+      "lt": "Karšti gėrimai",
+      "ru": "Горячие напитки",
+      "en": "Hot drinks"
+     }
+    },
+    {
+     "name": "Saçaq pendir",
+     "page": 24,
+     "lt": "Rūkytas sūris",
+     "ru": "Копчёный сыр",
+     "en": "Smoked cheese",
+     "price": "5.50",
+     "group": {
+      "lt": "Užkandžiai",
+      "ru": "Закуски",
+      "en": "Snacks"
+     }
+    },
+    {
+     "name": "Yer Fıstığı",
+     "page": 24,
+     "lt": "Žemės riešutai",
+     "ru": "Арахис",
+     "en": "Peanuts",
+     "price": "4.50",
+     "group": {
+      "lt": "Užkandžiai",
+      "ru": "Закуски",
+      "en": "Snacks"
+     }
+    },
+    {
+     "name": "Chips",
+     "page": 24,
+     "lt": "Traškučiai",
+     "ru": "Чипсы",
+     "price": "3.50",
+     "group": {
+      "lt": "Užkandžiai",
+      "ru": "Закуски",
+      "en": "Snacks"
+     }
+    }
+   ]
+  },
+  {
+   "id": "banketai",
+   "title": {
+    "lt": "Meniu gimtadieniui ar banketui",
+    "ru": "Меню на день рождения или банкет",
+    "en": "Birthday or Banquet Menu"
+   },
+   "items": [
+    {
+     "name": "SET 1",
+     "page": 25,
+     "lt": "Šacho plovas × 1\nAvienos gabalėlių šašlykas × 2\nMaltos mėsos šašlykas × 2\nMarinuotos jautienos šašlykas × 1\nVištienos filė šašlykas × 1\nAnt žarijų keptų daržovių salotos × 3\nŠviežios daržovės su sūriu × 3\nKompotas × 3",
+     "ru": "Шах-плов × 1\nШашлык из баранины кусочками × 2\nЛюля-кебаб × 2\nШашлык из маринованной говядины × 1\nШашлык из куриного филе × 1\nСалат из овощей, приготовленных на гриле × 3\nСвежие овощи с сыром × 3\nКомпот × 3",
+     "en": "Shah Plov × 1\nLamb Shashlik × 2\nMinced Meat Shashlik × 2\nMarinated Beef Shashlik × 1\nChicken Fillet Shashlik × 1\nGrilled Vegetable Salad × 3\nFresh vegetables with cheese × 3\nCompote × 3",
+     "price": "139.90",
+     "people": {
+      "lt": "6–7 žmonėms",
+      "ru": "на 6–7 человек",
+      "en": "for 6–7 people"
+     }
+    },
+    {
+     "name": "SET 2",
+     "page": 25,
+     "lt": "Šacho plovas × 2\nAvienos gabalėlių šašlykas × 2\nMaltos mėsos šašlykas × 2\nMarinuotos jautienos šašlykas × 2\nVištienos filė šašlykas × 2\nAnt žarijų keptų daržovių salotos × 3\nŠviežios daržovės su sūriu × 3\nKompotas × 3",
+     "ru": "Шах-плов × 2\nШашлык из баранины кусочками × 2\nЛюля-кебаб × 2\nШашлык из маринованной говядины × 2\nШашлык из куриного филе × 2\nСалат из овощей, приготовленных на гриле × 3\nСвежие овощи с сыром × 3\nКомпот × 3",
+     "en": "Shah Plov × 2\nLamb Shashlik × 2\nMinced Meat Shashlik × 2\nMarinated Beef Shashlik × 2\nChicken Fillet Shashlik × 2\nGrilled Vegetable Salad × 3\nFresh vegetables with cheese × 3\nCompote × 3",
+     "price": "189.90",
+     "people": {
+      "lt": "8–10 žmonėms",
+      "ru": "на 8–10 человек",
+      "en": "for 8–10 people"
+     }
+    },
+    {
+     "name": "Canlı musiqi",
+     "page": 25,
+     "lt": "Gyva muzika. lietuvių, rusų, anglų ir azerbaidžaniečių kalbomis. 60 € / val. – mažiausiai 2 val.",
+     "ru": "Живая музыка. на литовском, русском, английском и азербайджанском языках. 60 € / час – минимум 2 часа",
+     "en": "Live Music. in Lithuanian, Russian, English and Azerbaijani. 60 € / hour – minimum 2 hours",
+     "price": "60.00",
+     "unit": {
+      "lt": "val.",
+      "ru": "час",
+      "en": "hour"
+     }
+    },
+    {
+     "name": "Napoleon tortu",
+     "page": 25,
+     "lt": "Napoleono tortas",
+     "ru": "Торт «Наполеон»",
+     "en": "Napoleon Cake",
+     "price": "35.00",
+     "unit": "kg"
+    }
+   ]
+  }
+ ]
+}
