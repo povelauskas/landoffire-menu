@@ -164,7 +164,7 @@ def build():
               .replace("{{LD}}", json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"))
               .replace("{{SITE}}", SITE_URL))
     (DIST / "index.html").write_text(out)
-    for f in ("manifest.webmanifest", "robots.txt"):
+    for f in ("manifest.webmanifest", "robots.txt", "qr.html", "qr.svg", "qr.png", "qr-korteles.pdf"):
         shutil.copy(ROOT / "static" / f, DIST / f)
     (DIST / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
