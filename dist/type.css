@@ -1,0 +1,39 @@
+/* Shared type system for every page (classic menu, magazine, about).
+   Sizes are rem so the guest's own text-size setting still applies; fluid steps
+   use clamp() between a 360px phone and a 1240px desktop. Values and their
+   sources are in docs/typography.md. */
+:root{
+ --fs-label:.8125rem;                                   /* 13px  caps labels, chips, meta */
+ --fs-small:.9375rem;                                   /* 15px  secondary text, notes */
+ --fs-body:1.0625rem;                                   /* 17px  descriptions (iOS body size) */
+ --fs-price:1.0625rem;                                  /* 17px  prices, tabular figures */
+ --fs-item:clamp(1.25rem,1.17rem + .36vw,1.5rem);       /* 20→24 list item names */
+ --fs-dish:clamp(1.625rem,1.43rem + .91vw,2.25rem);     /* 26→36 dish names */
+ --fs-lead:clamp(1.1875rem,1.1rem + .45vw,1.5rem);      /* 19→24 lead paragraphs */
+ --fs-h2:clamp(1.875rem,1.6rem + 1.36vw,2.75rem);      /* 30→44 section titles */
+ --fs-h1:clamp(2.25rem,1.8rem + 2.27vw,3.5rem);         /* 36→56 page titles (M3 display-small on phones) */
+ --fs-num:clamp(3.5rem,2.8rem + 3.64vw,6rem);           /* 56→96 section numerals */
+ --fs-title:clamp(1.375rem,1.32rem + .23vw,1.5rem);    /* 22→24 app-style dish names (M3 title-large) */
+ --fs-cover:clamp(4.5rem,2.6rem + 9.1vw,9.5rem);        /* 72→152 cover word */
+ --lh-body:1.5; --lh-tight:1.2; --lh-display:1.1; --lh-label:1.3; --tap:48px;
+ --tr-caps:.08em; --tr-display:-.015em;
+}
+html{font-size:100%}
+body{font-size:var(--fs-body);line-height:var(--lh-body);font-kerning:normal;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+h1,h2,h3{text-wrap:balance}
+p,li,dd{text-wrap:pretty}
+p{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+h1,h2,h3,.name,.nm{overflow-wrap:break-word}
+/* Lithuanian hyphenation is missing in Safari/iOS, so long words may break instead */
+.price,.pr,.pl,.sz,.sum,.lt,.tot,.cnt,output{font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+/* drink size icons: sit on the text baseline, size grows with volume */
+.vol{display:inline-flex;align-items:center;gap:.35rem}
+.vol .ic{flex:none;color:currentColor;vertical-align:text-bottom}
+.pl{display:inline-flex;flex-wrap:wrap;align-items:center;column-gap:.5rem;row-gap:.1rem}
+.serves{flex-basis:100%;font-size:var(--fs-label);line-height:var(--lh-label);font-weight:500;font-style:normal;opacity:.85;white-space:normal}
+/* brand marks: sit on the name's baseline, never taller than a capital */
+.logo{display:inline-block;height:1.1em;width:auto;max-width:5.5rem;object-fit:contain;object-position:left bottom;vertical-align:-.15em;margin-right:.45rem}
+/* a size row: [icon size price / ≈ hint] [add] — the button never drops to its own line */
+.pk{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:.75rem}
+.pk:not(:has(.pl)){grid-template-columns:1fr auto}.pk:not(:has(.pl)) .ctl{grid-column:2}
+.price .vol{align-items:baseline}

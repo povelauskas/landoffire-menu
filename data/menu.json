@@ -1357,7 +1357,12 @@
       "en": "Snacks"
      }
     }
-   ]
+   ],
+   "note": {
+    "lt": "Prekių ženklai priklauso jų savininkams; logotipai rodomi tik gėrimui atpažinti. Logotipų failai – Wikimedia Commons, viešoji sritis.",
+    "en": "Trademarks belong to their owners and are shown only to identify the drink. Logo files: Wikimedia Commons, public domain.",
+    "ru": "Товарные знаки принадлежат их владельцам и показаны только для узнавания напитка. Файлы логотипов – Wikimedia Commons, общественное достояние."
+   }
   },
   {
    "id": "banketai",

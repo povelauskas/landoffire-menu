@@ -5,7 +5,7 @@ Inputs:  data/menu.json (sections + items, transcribed from the print menu)
          src/hi/p-NN.jpg (200 dpi page renders) for dish photo crops
 Outputs: dist/index.html, dist/img/*.webp, icons, manifest, robots, sitemap
 """
-import html, json, re, shutil, unicodedata
+import html, json, math, re, shutil, unicodedata
 from pathlib import Path
 from PIL import Image
 
@@ -97,6 +97,80 @@ def t(obj, lang):
     return "".join(f'<span lang="{l}" class="l-{l}">{e(obj.get(l, ""))}</span>' for l in LANGS if obj.get(l))
 
 
+# Drink size icons: 24x24 line drawings, drawn at a height that grows with the volume.
+ICONS = {
+    "shot": "M7.5 4h9l-1.6 16H9.1z M8.3 11h7.4",
+    "tumbler": "M5 6h14l-1.4 13.2a1 1 0 0 1-1 .8H7.4a1 1 0 0 1-1-.8z M5.8 13h12.4",
+    "snifter": "M6.6 6h10.8c.4 1.2.6 2.3.6 3.5 0 3.6-2.7 6.5-6 6.5s-6-2.9-6-6.5c0-1.2.2-2.3.6-3.5z M6.2 11h11.6 M12 16v4.5 M8.5 20.5h7",
+    "wine": "M7 3h10v4.5a5 5 0 0 1-10 0z M7.2 7h9.6 M12 12.5V20 M8.5 20.5h7",
+    "flute": "M9.5 3h5l-.5 8.5a2 2 0 0 1-4 0z M9.8 7h4.4 M12 13.5v6.5 M9.5 20.5h5",
+    "winebottle": "M10.4 2h3.2v5c0 1 3.4 2 3.4 5.2V21a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-8.8C7 9 10.4 8 10.4 7z M7 14h10",
+    "bottle": "M10.6 2h2.8v3l2.6 2.2V21a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V7.2L10.6 5z M8 11h8v6H8",
+    "soda": "M10.5 2h3v3c1.6 1 2.5 2.2 2.5 4.2V21a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9.2C8 7.2 8.9 6 10.5 5z M8 12h8",
+    "beer": "M5.5 5h10v15a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1z M15.5 9h2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2 M5.5 8.5h10",
+    "jug": "M7 3h9l-1.2 3.2C17 8.2 17 10.5 17 13v7a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-7c0-2.5 0-4.8 2.2-6.8z M17 9h1.5a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-1.5 1.5H17 M7 12h10",
+    "armudu": "M8 3h8c0 3.2-2.2 4.5-2.2 8.5S16 17 16 20H8c0-3 2.2-4.5 2.2-8.5S8 6.2 8 3z M7 21h10",
+    "espresso": "M5 9h11v4.5a4.5 4.5 0 0 1-4.5 4.5h-2A4.5 4.5 0 0 1 5 13.5z M16 10.5h1.5a2 2 0 0 1 0 4H16 M4 21h14",
+    "cocktail": "M4 4h16l-8 9z M7 7.4h10 M12 13v7 M8 20.5h8",
+}
+SPRITE = ('<svg width="0" height="0" style="position:absolute" aria-hidden="true">' + "".join(
+    f'<symbol id="i-{k}" viewBox="0 0 24 24"><path d="{d}" fill="none" stroke="currentColor" stroke-width="1.5" '
+    f'stroke-linecap="round" stroke-linejoin="round"/></symbol>' for k, d in ICONS.items()) + "</svg>")
+SERVES = {"wine": (150, {"lt": "taurės", "en": "glasses", "ru": "бокалов"}),
+          "shot": (40, {"lt": "taurelių", "en": "shots", "ru": "рюмок"})}
+
+
+def ml(label):
+    m = re.match(r"([\d,]+)\s*(ml|l)$", str(label).strip().lower())
+    return round(float(m.group(1).replace(",", ".")) * (1000 if m.group(2) == "l" else 1)) if m else None
+
+
+def drink_icon(it, label=""):
+    """Pick a glass/bottle for a drink (and size) and scale it by volume. Returns (svg, serves-hint)."""
+    g = (it.get("group") or {}).get("en", "")
+    v = ml(label) if label else ml(it.get("volume", ""))
+    if not g:
+        return "", ""
+    big = v and v >= 500
+    if g in ("Wine", "Sparkling wine"):
+        kind, unit = ("winebottle", "wine") if big else ("flute" if g.startswith("Sparkling") else "wine", None)
+    elif g in ("Vodka", "Gin", "Rum", "Whisky", "Cognac", "Liqueurs & infusions"):
+        small = {"Whisky": "tumbler", "Cognac": "snifter"}.get(g, "shot")
+        kind, unit = ("bottle", "shot") if big else (small, None)
+    elif g == "Beer":
+        kind, unit = "beer", None
+    elif g == "Compotes":
+        kind, unit = ("jug" if v and v >= 1000 else "soda"), None
+    elif g == "Non-alcoholic drinks":
+        kind, unit = "soda", None
+    elif g == "Cocktails":
+        kind, unit = "cocktail", None
+    elif g == "Hot drinks":
+        kind, unit = ("armudu" if it["name"] == "Çay" else "espresso"), None
+    else:
+        return "", ""
+    h = 22 if not v else round(18 + 14 * min(1, max(0, math.log(v / 40) / math.log(25))))
+    svg = f'<svg class="ic" width="{h}" height="{h}" aria-hidden="true"><use href="#i-{kind}"/></svg>'
+    hint = ""
+    if unit and v:
+        per, words = SERVES[unit]
+        n = int(v / per)
+        hint = f'<em class="serves">≈&nbsp;{n}&nbsp;{t(words, "lt")}</em>'
+    return svg, hint
+
+
+NBSP = "\u00a0"
+
+
+LOGOS = json.loads((ROOT / "data" / "logos.json").read_text())
+
+
+def logo(it):
+    """Brand mark from Wikimedia Commons (public-domain files only, see data/logos.json); decorative."""
+    lg = LOGOS.get(it["name"])
+    return f'<img class="logo" src="{e(lg["file"])}" alt="" height="22" loading="lazy" decoding="async">' if lg else ""
+
+
 def money(p):
     return f'{e(str(p).replace(".", ","))}&nbsp;€'
 
@@ -112,7 +186,9 @@ def price_html(it):
     if not it.get("price"):
         return ""
     unit = f' / {lbl(it["unit"])}' if it.get("unit") else ""
-    vol = f'<small>{e(it["volume"])}</small> ' if it.get("volume") else ""
+    ic, _ = drink_icon(it)
+    vol = f'<small class="vol">{ic}{e(it["volume"].replace(" ", NBSP))}</small> ' if it.get("volume") else (
+        f'<small class="vol">{ic}</small> ' if ic else "")
     return f'<span class="price">{vol}{money(it["price"])}{unit}</span>'
 
 
@@ -125,7 +201,9 @@ def picks_html(it, iid):
     for k, o in enumerate(offers):
         key = iid if len(offers) == 1 else f"{iid}~{k}"
         z = o.get("label") or it.get("volume") or ""
-        label = f'<span class="pl"><small>{lbl(z)}</small> {money(o["price"])}</span>' if it.get("sizes") else ""
+        ic, hint = drink_icon(it, z if isinstance(z, str) else "")
+        zt = e(z.replace(" ", NBSP)) if isinstance(z, str) else lbl(z)
+        label = f'<span class="pl"><small class="vol">{ic}{zt}</small> {money(o["price"])}{hint}</span>' if it.get("sizes") else ""
         rows.append(f'<div class="pk">{label}<span class="ctl" data-k="{e(key)}" data-n="{e(it["name"])}" '
                     f'data-p="{round(float(o["price"]) * 100)}" data-z="{e(json.dumps(z, ensure_ascii=False))}"></span></div>')
     return f'<div class="picks">{"".join(rows)}</div>' if rows else ""
@@ -190,11 +268,12 @@ def render_mag(data, dims, place):
                     group = it["group"]
                     rows.append(f'<h3 class="grp">{t(group, "lt")}</h3>')
                 rows.append(
-                    f'<article class="li" data-s="{e(search)}"><div class="row"><span class="nm">{e(it["name"])}</span>'
+                    f'<article class="li" data-s="{e(search)}">{logo(it)}<div class="row"><span class="nm">{e(it["name"])}</span>'
                     f'<span class="dots"></span><span class="pr">{price_html(it)}</span></div>{extra}{p}{picks_html(it, iid)}</article>')
         inner = (f'<div class="feats">{"".join(feats)}</div>' if feats else "") + (f'<div class="list">{"".join(rows)}</div>' if rows else "")
         body.append(f'<section id="{sid}" class="sec" aria-labelledby="mh-{sid}"><div class="opener"><span class="num">{num}</span>'
-                    f'<h2 id="mh-{sid}">{t(sec["title"], "lt")}</h2><span class="alt caps">{e(alt)}</span></div>{inner}</section>')
+                    f'<h2 id="mh-{sid}">{t(sec["title"], "lt")}</h2><span class="alt caps">{e(alt)}</span></div>{inner}'
+                    f'{"<p class=sec-note>" + t(sec["note"], "lt") + "</p>" if sec.get("note") else ""}</section>')
         if n in QUOTES:
             body.append(f'<blockquote class="quote"><q>{t(QUOTES[n], "lt")}</q></blockquote>')
     return {"{{NAV}}": "".join(nav), "{{TOC}}": "".join(toc), "{{BODY}}": "".join(body),
@@ -255,7 +334,7 @@ def build():
             cls = "card" if img else "row"
             cards.append(
                 f'<article class="{cls}" id="{iid}" data-s="{e(search)}">{img}'
-                f'<div class="txt"><h3 class="it"><span class="name">{e(it["name"])}</span>{price_html(it)}</h3>'
+                f'<div class="txt"><h3 class="it"><span class="name">{logo(it)}{e(it["name"])}</span>{price_html(it)}</h3>'
                 f'{extra}{"<p>" + t(desc, "lt") + "</p>" if any(desc.values()) else ""}{picks_html(it, iid)}</div></article>')
             ld = {"@type": "MenuItem", "name": it["name"], "description": it.get("en") or it.get("lt", "")}
             if it.get("sizes"):
@@ -286,13 +365,14 @@ def build():
               .replace("{{FOOTER}}", info.get("footer_html", ""))
               .replace("{{UI}}", json.dumps(UI, ensure_ascii=False))
               .replace("{{LD}}", json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"))
-              .replace("{{SITE}}", SITE_URL).replace("{{EARLY}}", EARLY))
+              .replace("{{SITE}}", SITE_URL).replace("{{EARLY}}", EARLY).replace("{{ICONS}}", SPRITE))
     (DIST / "index.html").write_text(out)
-    common = {"{{UI}}": json.dumps(UI, ensure_ascii=False), "{{SITE}}": SITE_URL, "{{EARLY}}": EARLY}
+    common = {"{{ICONS}}": SPRITE, "{{UI}}": json.dumps(UI, ensure_ascii=False), "{{SITE}}": SITE_URL, "{{EARLY}}": EARLY}
     fill = lambda tpl, extra: _fill((ROOT / tpl).read_text(), {**common, **extra})
     (DIST / "magazine.html").write_text(fill("template-mag.html", render_mag(data, dims, place)))
     (DIST / "apie.html").write_text(fill("template-about.html", render_about(about)))
-    for f in ("manifest.webmanifest", "robots.txt", "qr.html", "qr.svg", "qr.png", "qr-korteles.pdf", "app.js"):
+    shutil.copytree(ROOT / "static" / "logos", DIST / "logos")
+    for f in ("manifest.webmanifest", "robots.txt", "qr.html", "qr.svg", "qr.png", "qr-korteles.pdf", "app.js", "type.css"):
         shutil.copy(ROOT / "static" / f, DIST / f)
     shutil.copytree(ROOT / "static" / "fonts", DIST / "fonts")
     (DIST / "sitemap.xml").write_text(

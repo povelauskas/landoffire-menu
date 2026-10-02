@@ -1,0 +1,68 @@
+{
+ "Coca-Cola": {
+  "file": "logos/coca-cola.svg",
+  "commons": "https://commons.wikimedia.org/wiki/File:Coca-Cola_logo.svg",
+  "license": "Public domain",
+  "note": "{{PD-textlogo}} + {{PD-anon-expired}}, trademarked. Red script on transparent; readable on cream."
+ },
+ "Sprite": {
+  "file": "logos/sprite.svg",
+  "commons": "https://commons.wikimedia.org/wiki/File:Sprite_2026.svg",
+  "license": "Public domain",
+  "note": "{{PD-textlogo}}, trademarked. 2026 wordmark, green with yellow lemon dot on transparent; readable on cream."
+ },
+ "Fanta": {
+  "file": "logos/fanta.svg",
+  "commons": "https://commons.wikimedia.org/wiki/File:Fanta_2023.svg",
+  "license": "Public domain",
+  "note": "{{PD-textlogo}}, trademarked. 2023 logo: white letters on its own blue shape; self-contained, fine on cream."
+ },
+ "Schweppes": {
+  "file": "logos/schweppes.svg",
+  "commons": "https://commons.wikimedia.org/wiki/File:Schweppes_wordmark.svg",
+  "license": "Public domain",
+  "note": "{{PD-textlogo}}, trademarked. Black script on transparent; readable on cream."
+ },
+ "Red Bull": {
+  "file": "logos/red-bull.svg",
+  "commons": "https://commons.wikimedia.org/wiki/File:Logo_of_Red_bull.svg",
+  "license": "Public domain",
+  "note": "{{PD-textlogo}}, trademarked. Text-only 'Red Bull' wordmark (no bulls/sun), red on transparent; readable on cream."
+ },
+ "Martini Asti": {
+  "file": "logos/martini.svg",
+  "commons": "https://commons.wikimedia.org/wiki/File:Martini_Logo.svg",
+  "license": "Public domain",
+  "note": "{{PD-textlogo}}, trademarked. Martini ball-and-bar brand logo (not Asti-specific). White text on own black bar/red disc; self-contained, fine on cream."
+ },
+ "Absolut": {
+  "file": "logos/absolut.svg",
+  "commons": "https://commons.wikimedia.org/wiki/File:Logo-absolut.svg",
+  "license": "Public domain",
+  "note": "{{PD-Textlogo}}, trademarked. Blue wordmark on transparent; readable on cream."
+ },
+ "Nemiroff": {
+  "file": "logos/nemiroff.png",
+  "commons": "https://commons.wikimedia.org/wiki/File:NemiroffLogo.jpg",
+  "license": "Public domain",
+  "note": "{{PD-textlogo}}, trademarked. Original is a JPG on white; converted to transparent PNG (white keyed out, cropped). Dark grey on transparent; readable on cream."
+ },
+ "Ballantine's Finest": {
+  "file": "logos/ballantines.svg",
+  "commons": "https://commons.wikimedia.org/wiki/File:Ballantines_logo.svg",
+  "license": "Public domain",
+  "note": "{{PD-textlogo}}, trademarked. Black script 'Ballantine's' on transparent; readable on cream."
+ },
+ "Corona Extra": {
+  "file": "logos/corona-extra.svg",
+  "commons": "https://commons.wikimedia.org/wiki/File:Corona_Extra_text_logo.svg",
+  "license": "Public domain",
+  "note": "{{PD-textlogo}}, trademarked. Blue blackletter 'Corona Extra' on transparent; readable on cream."
+ },
+ "Aperol Spritz": {
+  "file": "logos/aperol.svg",
+  "commons": "https://commons.wikimedia.org/wiki/File:Aperol_Logo.svg",
+  "license": "Public domain",
+  "note": "{{PD-textlogo}}, trademarked. Orange 'Aperol 1919' on transparent; readable on cream."
+ }
+}
