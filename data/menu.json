@@ -193,8 +193,8 @@
     {
      "name": "Buğlama",
      "page": 8,
-     "lt": "Avienos mėsa su saldžiąja paprika, pomidorais. Pateikiama su duona.",
-     "ru": "Мясо баранины с болгарским перцем, помидорами. Подается с хлебом.",
+     "lt": "Avienos mėsa su saldžiąja paprika, pomidorais. Patiekiama su duona.",
+     "ru": "Мясо баранины с болгарским перцем, помидорами. Подаётся с хлебом.",
      "en": "Lamb meat with bell peppers and tomatoes. Served with bread.",
      "photo": [
       0.085,
@@ -221,7 +221,7 @@
     {
      "name": "Piti",
      "page": 9,
-     "lt": "Aviena su avinžirniais, bulvėmis, kaštonais ir tradiciniais prieskoniais. Troškinama moliniame puode 5 valandas. Pateikiama su duona.",
+     "lt": "Aviena su avinžirniais, bulvėmis, kaštonais ir tradiciniais prieskoniais. Troškinama moliniame puode 5 valandas. Patiekiama su duona.",
      "ru": "Баранина с нутом, картофелем, каштанами и традиционными специями. Томится в глиняном горшке в течение 5 часов. Подаётся с хлебом.",
      "en": "Lamb with chickpeas, potatoes, chestnuts and traditional spices. Slow-cooked in a clay pot for 5 hours. Served with bread.",
      "photo": [
@@ -235,7 +235,7 @@
     {
      "name": "Üç Bacı Dolması",
      "page": 10,
-     "lt": "Įdaryti baklažanai, pomidorai ir saldžiosios paprikos su malta mėsa. Pateikiama su duona.",
+     "lt": "Įdaryti baklažanai, pomidorai ir saldžiosios paprikos su malta mėsa. Patiekiama su duona.",
      "ru": "Фаршированные баклажаны, помидоры и болгарский перец с мясом. Подаётся с хлебом.",
      "en": "Stuffed eggplant, tomatoes and bell peppers with minced meat. Served with bread.",
      "photo": [
@@ -249,7 +249,7 @@
     {
      "name": "Yarpaq Dolması",
      "page": 10,
-     "lt": "Vynuogių lapai, įdaryti malta mėsa ir ryžiais. Pateikiama su duona.",
+     "lt": "Vynuogių lapai, įdaryti malta mėsa ir ryžiais. Patiekiama su duona.",
      "ru": "Виноградные листья, фаршированные мясом и рисом. Подаётся с хлебом.",
      "en": "Grape leaves stuffed with minced meat and rice. Served with bread.",
      "photo": [
@@ -292,7 +292,7 @@
      "name": "Tava Kotleti",
      "page": 11,
      "lt": "Keptas mėsos kotletas ir keptos bulvės. Patiekiama su duona.",
-     "ru": "Жареный мясной котлет и жареный картофель. Подается с хлебом.",
+     "ru": "Жареная мясная котлета и жареный картофель. Подаётся с хлебом.",
      "en": "Fried meat cutlet with fried potatoes. Served with bread.",
      "photo": [
       0.385,
@@ -371,7 +371,7 @@
     {
      "name": "Düşbərə",
      "page": 14,
-     "lt": "Tradicinė azerbaidžanietiška sriuba su mažais mėsos kukuliais. Pateikiama su duona.",
+     "lt": "Tradicinė azerbaidžanietiška sriuba su mažais mėsos kukuliais. Patiekiama su duona.",
      "ru": "Традиционный азербайджанский суп с маленькими мясными пельменями. Подаётся с хлебом.",
      "en": "Traditional azerbaijani soup with small meat dumplings. Served with bread.",
      "photo": [
@@ -402,7 +402,7 @@
     {
      "name": "Mərci Supu",
      "page": 15,
-     "lt": "Lęšių sriuba su tradiciniais prieskoniais. Pateikiama su duona.",
+     "lt": "Lęšių sriuba su tradiciniais prieskoniais. Patiekiama su duona.",
      "ru": "Суп из чечевицы с традиционными специями. Подаётся с хлебом.",
      "en": "Lentil soup with traditional spices. Served with bread.",
      "photo": [
@@ -433,7 +433,7 @@
     {
      "name": "Toyuq Supu",
      "page": 15,
-     "lt": "Vištienos sriuba su bulvėmis. Pateikiama su duona.",
+     "lt": "Vištienos sriuba su bulvėmis. Patiekiama su duona.",
      "ru": "Куриный суп с картофелем. Подаётся с хлебом.",
      "en": "Chicken soup with potatoes. Served with bread.",
      "photo": [
@@ -1423,7 +1423,7 @@
    ],
    "nav": {
     "lt": "Banketams",
-    "ru": "Банкет",
+    "ru": "Банкеты",
     "en": "Banquets"
    }
   }

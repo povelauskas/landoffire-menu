@@ -23,3 +23,7 @@ Rebuilding needs the page renders in `src/hi/` (not committed; made from the PDF
 
 - Düyü, Russian text printed as "Бasmati düyüsü" → shown as "Рис басмати".
 - Şah Plov, English text repeated the price inline → removed.
+- Lithuanian "Pateikiama su duona" (7 dishes) → "Patiekiama su duona" (patiekti = to serve), as the menu already says elsewhere.
+- Tava Kotleti, Russian "Жареный мясной котлет" → "Жареная мясная котлета" (котлета is feminine).
+- Russian "Подается" → "Подаётся" so all dishes use the same spelling.
+- Russian banquet tab "Банкет" → "Банкеты", plural like the other tabs.

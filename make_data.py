@@ -100,7 +100,7 @@ info = {
 }
 for s in sections:
     if s["id"] == "banketai":
-        s["nav"] = {"lt": "Banketams", "ru": "Банкет", "en": "Banquets"}
+        s["nav"] = {"lt": "Banketams", "ru": "Банкеты", "en": "Banquets"}
 out = ROOT / "data" / "menu.json"
 out.parent.mkdir(exist_ok=True)
 out.write_text(json.dumps({"info": info, "sections": sections}, ensure_ascii=False, indent=1) + "\n")
