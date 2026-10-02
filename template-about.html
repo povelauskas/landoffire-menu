@@ -45,14 +45,7 @@ header.top{position:sticky;top:0;z-index:20;background:var(--paper);border-botto
 .lg{margin-top:4.5rem;border-top:3px double var(--ink);padding-top:1rem}
 .lg .head{display:flex;justify-content:space-between;align-items:baseline}
 .lg h2{font:italic 400 var(--fs-h2)/var(--lh-tight) var(--disp);margin:.4rem 0 1.2rem}
-.tabs{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--pad));padding:0 var(--pad) .2rem}
-.tabs{flex-direction:column;gap:0;border-top:1px solid var(--ink);margin:0;padding:0}
-.tabs button{all:unset;cursor:pointer;display:flex;gap:1rem;align-items:baseline;min-height:44px;box-sizing:border-box;font:italic 400 var(--fs-item)/var(--lh-tight) var(--disp);padding:.85rem 0;border-bottom:1px solid rgba(22,18,15,.2);color:var(--soft)}
-.tabs button b{font:600 var(--fs-label)/var(--lh-label) var(--text);letter-spacing:.1em;font-style:normal;color:var(--red);min-width:1.2rem}
 
-.tabs button[aria-selected=true]{color:var(--ink)}
-.tabs button[aria-selected=true]::after{content:"←";margin-left:auto;font-style:normal;color:var(--red)}
-.tabs button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 .legend h3{font:400 var(--fs-dish)/var(--lh-tight) var(--disp);margin:1.6rem 0 1rem;letter-spacing:-.015em}
 .legend p{font:400 var(--fs-lead)/1.6 var(--disp);max-width:34em;margin:0}
 .legend p::first-letter{float:left;font:400 calc(var(--fs-lead) * 1.6 * 3 - .2rem)/.8 var(--disp);color:var(--red);padding:.35rem .5rem 0 0}
@@ -88,9 +81,8 @@ footer a{color:var(--ink)}
   <ul class="points">{{POINTS}}</ul>
  </section>
  <section class="lg" aria-labelledby="lgh">
-  <div class="head"><p class="caps" data-ui="pick">Pasirinkite legendą</p></div>
+  <div class="head"><p class="caps">00</p></div>
   <h2 id="lgh" data-ui="legend">Legenda</h2>
-  <div class="tabs" role="tablist">{{TABS}}</div>
   {{LEGENDS}}
  </section>
  <section class="visit" aria-labelledby="vh">
@@ -112,10 +104,5 @@ footer a{color:var(--ink)}
 <footer>{{FOOTER}}</footer>
 <script type="application/json" id="ui">{{UI}}</script>
 <script src="app.js" defer></script>
-<script>
-document.querySelector(".tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
- document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));
- document.querySelectorAll(".legend").forEach(a=>a.hidden=a.dataset.lg!==b.dataset.lg)});
-</script>
 </body>
 </html>

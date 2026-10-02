@@ -237,9 +237,23 @@ QUOTES = {1: {"lt": "Ugnis – pirmasis prieskonis.", "en": "Fire is the first s
               "ru": "Из-за азербайджанского стола никто не уходит голодным."}}
 
 
-def render_mag(data, dims, place):
-    """Magazine edition: same data and pick controls, editorial layout."""
-    nav, toc, body = [], [], []
+LEGEND_TITLE = {"lt": "Legenda", "en": "The legend", "ru": "Легенда"}
+
+
+def legend_html(g, cls):
+    return (f'<article class="{cls}"><h3>{t(g["title"], "lt")}</h3><p>{t(g["body"], "lt")}</p>'
+            f'<p class="more"><a href="apie">{t(ABOUT_LINK, "lt")}</a></p></article>')
+
+
+def render_mag(data, dims, place, legend):
+    """Magazine edition: same data and pick controls, editorial layout. Section 00 is the legend."""
+    alt0 = " · ".join(LEGEND_TITLE[l] for l in LANGS)
+    nav = [f'<a href="#legenda" data-sec="legenda"><i>00</i>{t(LEGEND_TITLE, "lt")}</a>']
+    toc = [f'<li><a href="#legenda"><span class="n">00</span><span class="t">{t(LEGEND_TITLE, "lt")}</span>'
+           f'<span class="c caps">{t(legend["title"], "lt")}</span></a></li>']
+    body = [f'<section id="legenda" class="sec" aria-labelledby="mh-legenda"><div class="opener"><span class="num">00</span>'
+            f'<h2 id="mh-legenda">{t(LEGEND_TITLE, "lt")}</h2><span class="alt caps">{e(alt0)}</span></div>'
+            f'{legend_html(legend, "legend")}</section>']
     for n, sec in enumerate(data["sections"], 1):
         sid, num = sec["id"], f"{n:02d}"
         title = sec.get("nav", sec["title"])
@@ -289,14 +303,12 @@ def render_about(about):
     pl = about["place"]
     tel = re.sub(r"[^+0-9]", "", pl["phone"])
     it = about["intro"]
-    tabs = "".join(f'<button type="button" role="tab" data-lg="{g["key"]}" aria-selected="{str(i == 0).lower()}">'
-                   f'<b>{g["key"]}</b> {t(g["title"], "lt")}</button>' for i, g in enumerate(about["legends"]))
     legends = "".join(f'<article class="legend" data-lg="{g["key"]}"{"" if i == 0 else " hidden"}>'
                       f'<h3>{t(g["title"], "lt")}</h3><p>{t(g["body"], "lt")}</p></article>'
                       for i, g in enumerate(about["legends"]))
     return {"{{KICKER}}": t(it["kicker"], "lt"), "{{TITLE}}": t(it["title"], "lt"), "{{LEAD}}": t(it["lead"], "lt"),
             "{{POINTS}}": "".join(f"<li>{t(p, 'lt')}</li>" for p in it["points"]),
-            "{{TABS}}": tabs, "{{LEGENDS}}": legends,
+            "{{LEGENDS}}": legends,
             "{{ADDR}}": e(pl["address"]), "{{MAPS}}": e(pl["maps"]), "{{PHONE}}": e(pl["phone"]), "{{TEL}}": tel,
             "{{RATING}}": e(pl["rating"]), "{{IG}}": e(pl["instagram"]), "{{FOOTER}}": footer_html(pl)}
 
@@ -308,7 +320,12 @@ def build():
     data = json.loads((ROOT / "data" / "menu.json").read_text())
     make_brand()
 
-    nav, body, ld_sections, seen, dims = [], [], [], set(), {}
+    about = json.loads((ROOT / "data" / "about.json").read_text())
+    legend = about["legends"][0]
+    nav = [f'<a href="#legenda" data-sec="legenda">{t(LEGEND_TITLE, "lt")}</a>']
+    body = [f'<section id="legenda" class="sec" aria-labelledby="h-legenda"><h2 id="h-legenda">{t(LEGEND_TITLE, "lt")}</h2>'
+            f'{legend_html(legend, "legend card")}</section>']
+    ld_sections, seen, dims = [], set(), {}
     for sec in data["sections"]:
         sid = sec["id"]
         nav.append(f'<a href="#{sid}" data-sec="{sid}">{t(sec.get("nav", sec["title"]), "lt")}</a>')
@@ -349,7 +366,6 @@ def build():
         ld_sections.append({"@type": "MenuSection", "name": sec["title"]["en"], "hasMenuItem": ld_items})
 
     info = data["info"]
-    about = json.loads((ROOT / "data" / "about.json").read_text())
     place = about["place"]
     info["footer_html"] = footer_html(place)
     ld = {
@@ -369,7 +385,7 @@ def build():
     (DIST / "index.html").write_text(out)
     common = {"{{ICONS}}": SPRITE, "{{UI}}": json.dumps(UI, ensure_ascii=False), "{{SITE}}": SITE_URL, "{{EARLY}}": EARLY}
     fill = lambda tpl, extra: _fill((ROOT / tpl).read_text(), {**common, **extra})
-    (DIST / "magazine.html").write_text(fill("template-mag.html", render_mag(data, dims, place)))
+    (DIST / "magazine.html").write_text(fill("template-mag.html", render_mag(data, dims, place, about["legends"][0])))
     (DIST / "apie.html").write_text(fill("template-about.html", render_about(about)))
     shutil.copytree(ROOT / "static" / "logos", DIST / "logos")
     for f in ("manifest.webmanifest", "robots.txt", "qr.html", "qr.svg", "qr.png", "qr-korteles.pdf", "app.js", "type.css"):
