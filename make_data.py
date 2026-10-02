@@ -98,6 +98,9 @@ info = {
     "instagram": "landoffire.vilnius",
     "footer_html": '<p><a href="https://www.instagram.com/landoffire.vilnius/" rel="noopener">Instagram @landoffire.vilnius</a></p>',
 }
+for s in sections:
+    if s["id"] == "banketai":
+        s["nav"] = {"lt": "Banketams", "ru": "Банкет", "en": "Banquets"}
 out = ROOT / "data" / "menu.json"
 out.parent.mkdir(exist_ok=True)
 out.write_text(json.dumps({"info": info, "sections": sections}, ensure_ascii=False, indent=1) + "\n")

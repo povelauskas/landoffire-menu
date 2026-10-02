@@ -106,7 +106,7 @@ def build():
     nav, body, ld_sections, seen = [], [], [], set()
     for sec in data["sections"]:
         sid = sec["id"]
-        nav.append(f'<a href="#{sid}" data-sec="{sid}">{t(sec["title"], "lt")}</a>')
+        nav.append(f'<a href="#{sid}" data-sec="{sid}">{t(sec.get("nav", sec["title"]), "lt")}</a>')
         cards, ld_items, group = [], [], None
         for i, it in enumerate(sec["items"]):
             iid = f"{sid}-{slug(it['name'])}"

@@ -1415,7 +1415,12 @@
      "price": "35.00",
      "unit": "kg"
     }
-   ]
+   ],
+   "nav": {
+    "lt": "Banketams",
+    "ru": "Банкет",
+    "en": "Banquets"
+   }
   }
  ]
 }
