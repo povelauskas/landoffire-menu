@@ -44,7 +44,7 @@ nav.cats{border-top:1px solid rgba(22,18,15,.15)}
 nav.cats .in{display:flex;gap:1.4rem;overflow-x:auto;padding:.55rem var(--pad);max-width:1180px;margin:auto;scrollbar-width:none}
 nav.cats .in::-webkit-scrollbar{display:none}
 nav.cats a{flex:none;text-decoration:none;font:600 var(--fs-label)/var(--lh-label) var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);padding:0;min-height:44px;display:inline-flex;align-items:center;border-bottom:2px solid transparent}
-nav.cats a i{font:italic 400 1rem/1 var(--disp);letter-spacing:0;color:var(--red);margin-right:.35rem}
+nav.cats a i{font:italic 400 1.0625rem/1 var(--disp);font-variant-numeric:lining-nums tabular-nums;letter-spacing:0;color:var(--red);margin-right:.45rem;display:inline-flex;align-items:center;align-self:center;transform:translateY(-.04em)}  /* optically centred on the caps, measured */
 nav.cats a.on{color:var(--ink);border-color:var(--ink)}
 /* cover */
 .cover{position:relative;max-width:1180px;margin:auto;padding:1.5rem var(--pad) 0}
@@ -55,13 +55,13 @@ nav.cats a.on{color:var(--ink);border-color:var(--ink)}
 .cover figure{margin:0 calc(-1 * var(--pad))}
 .cover figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:52% 60%}
 @media (min-width:800px){.cover figure img{aspect-ratio:16/8}}
-.cover figcaption{display:flex;justify-content:space-between;padding:.5rem var(--pad);color:var(--soft)}
+.cover figcaption{display:flex;justify-content:space-between;padding:var(--pad) var(--pad) 0;color:var(--soft)}
 /* contents */
 .toc{max-width:1180px;margin:var(--sp-6) auto 0;padding:0 var(--pad)}
 .toc h2{font:italic 400 var(--fs-h2)/var(--lh-tight) var(--disp);margin:0 0 1rem}
 .toc ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
 .toc li a{display:flex;align-items:baseline;gap:1rem;padding:.8rem 0;border-bottom:1px solid rgba(22,18,15,.18);text-decoration:none}
-.toc .n{font:italic 400 var(--fs-item)/1 var(--disp);color:var(--red);min-width:2.2rem;font-variant-numeric:lining-nums tabular-nums}
+.toc .n{font-variant-numeric:lining-nums tabular-nums;font:italic 400 var(--fs-item)/1 var(--disp);color:var(--red);min-width:2.2rem;font-variant-numeric:lining-nums tabular-nums}
 .toc .t{font:400 var(--fs-item)/var(--lh-tight) var(--disp)}
 .toc .c{margin-left:auto;color:var(--soft)}
 .search{max-width:1180px;margin:var(--sp-5) auto 0;padding:0 var(--pad)}
@@ -80,7 +80,7 @@ main{max-width:1180px;margin:auto;padding:0 var(--pad) 4rem}
 @media (max-width:859px){.feat figure{margin:0 calc(-1 * var(--pad))}}
 .feat img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#e8e0d3}
 .feat figcaption{display:flex;justify-content:space-between;color:var(--soft);padding:.5rem 0 0}
-@media (max-width:859px){.feat figcaption{padding:.5rem var(--pad) 0}}
+@media (max-width:859px){.feat figcaption{padding:var(--pad) var(--pad) 0}}
 .feat h3{font:400 var(--fs-dish)/var(--lh-tight) var(--disp);letter-spacing:-.015em;margin:var(--sp-3) 0 var(--sp-1)}
 .feat .pr{font:600 var(--fs-price)/1.3 var(--text);font-variant-numeric:tabular-nums;color:var(--red);white-space:nowrap}
 .feat .pr small,.li .pr small,.pl small{font:600 var(--fs-label)/var(--lh-label) var(--text);letter-spacing:.1em;color:var(--soft);margin-right:.35rem;text-transform:uppercase}
